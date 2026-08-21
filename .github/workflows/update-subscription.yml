@@ -36,22 +36,31 @@ jobs:
           ./clash-speedtest -v
 
       - name: Test nodes and generate subscription
+        id: speedtest
         env:
           CLASH_SOURCE_URL: ${{ secrets.CLASH_SOURCE_URL }}
         shell: bash
         run: |
           set -euo pipefail
           test -n "${CLASH_SOURCE_URL:-}"
+          set +e
           ./clash-speedtest -c "$CLASH_SOURCE_URL" -concurrent 12 -download-size 3145728 -timeout 3s -max-latency 1500ms -max-packet-loss 70 -min-download-speed 0.2 -output single_node_test.new.yaml
-          test -s single_node_test.new.yaml
-          grep -Eq '^proxies:[[:space:]]*$' single_node_test.new.yaml
+          speedtest_exit=$?
+          set -e
+          if [ "$speedtest_exit" -ne 0 ] || [ ! -s single_node_test.new.yaml ]; then
+            echo "updated=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           if grep -Eq '^proxies:[[:space:]]*\[\][[:space:]]*$' single_node_test.new.yaml || ! grep -Eq '^[[:space:]]*-[[:space:]]+name:' single_node_test.new.yaml; then
-            echo "No usable proxies were exported. Preserving the previous subscription." >&2
-            exit 1
+            echo "No usable proxies were exported. Preserving the previous subscription."
+            echo "updated=false" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
           mv -f single_node_test.new.yaml single_node_test.yaml
+          echo "updated=true" >> "$GITHUB_OUTPUT"
 
       - name: Commit updated subscription
+        if: steps.speedtest.outputs.updated == 'true'
         shell: bash
         run: |
           set -euo pipefail
