@@ -1,0 +1,1268 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+- name: VLESS-SG-07
+  type: vless
+  server: 104.16.117.43
+  port: 443
+  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
+  udp: true
+  network: ws
+  tls: true
+  servername: josni.hoyes.cloudns.ch
+  client-fingerprint: chrome
+  ws-opts:
+    path: /musiclovers85
+    headers:
+      Host: josni.hoyes.cloudns.ch
+    max-early-data: 512
+    early-data-header-name: Sec-WebSocket-Protocol
+  packet-encoding: xudp
+- name: Hysteria2-SG-05
+  type: hysteria2
+  server: 13.212.32.171
+  port: 443
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  sni: vpn-sg-001.fastervpn.world
+  skip-cert-verify: true
+- name: VLESS-NL-01
+  type: vless
+  server: 45.91.202.27
+  port: 8444
+  uuid: 1f619326-cd93-4d6b-aebe-e0b5f8831d02
+  udp: true
+  network: ws
+  tls: true
+  servername: bridge.meshbeat.online
+  client-fingerprint: firefox
+  ws-opts:
+    path: /api/v1/devices/c79c81b07c/telemetry
+    headers:
+      Host: bridge.meshbeat.online
+- name: VLESS-NL-02
+  type: vless
+  server: 141.144.199.129
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+- name: Hysteria2-JP-01
+  type: hysteria2
+  server: 45.32.252.144
+  port: 443
+  password: 1e3a5c5fde1da9dd1358b4adeb0c4ca1
+  sni: vps.vpsv.cc
+  skip-cert-verify: true
+- name: VLESS-CO-02
+  type: vless
+  server: 158.247.126.227
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+- name: VLESS-DE-06
+  type: vless
+  server: ger.me1.pingsf.ir
+  port: 443
+  uuid: 59086073-d6da-44ed-b604-241ecdf03e97
+  udp: true
+- name: VLESS-NL-08
+  type: vless
+  server: 143.47.183.183
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+- name: VLESS-US-05
+  type: vless
+  server: 104.21.85.220
+  port: 443
+  uuid: 7893b302-3882-4c38-9ab6-6313f1575d1a
+  udp: true
+  network: ws
+  tls: true
+  servername: cf.udpid.org
+  skip-cert-verify: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /@zyzzzoao
+    headers:
+      Host: cf.udpid.org
+- name: Hysteria2-AE-01
+  type: hysteria2
+  server: pixelcast.wwwinternetvideo.click
+  port: 443
+  password: 2vwMMy8t5Sjl5lfK9dNF1OrU9d0K25V2RNWLbTKwJ6o
+  sni: pixelcast.wwwinternetvideo.click
+  skip-cert-verify: true
+- name: VLESS-NL-13
+  type: vless
+  server: 141.148.232.137
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+- name: VLESS-CO-03
+  type: vless
+  server: 157.137.210.216
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+- name: VLESS-DE-05
+  type: vless
+  server: 162.159.157.123
+  port: 2095
+  uuid: e9906741-9d06-41b3-87a5-0a875e84cd5e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vl/YdchdFjEaLDc1fP7hGw1Xo7u26my9b
+    headers:
+      Host: uob-coc1hsz2s1-sdlff-k.silannalis-35922.workers.dev
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: VLESS-CO-08
+  type: vless
+  server: 149.130.190.81
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+- name: Hysteria2-SG-01
+  type: hysteria2
+  server: 64.235.45.208
+  port: 12645
+  password: 9gWt2z3KdC9VI8kAQYVvvSvhT9e05CfI
+  sni: vip-sg-1.hkd4fwmg.vip
+  skip-cert-verify: true
+- name: VLESS-CA-05
+  type: vless
+  server: 172.67.68.66
+  port: 2096
+  uuid: 73bcd72f-9545-4cb8-8daf-7d004501880d
+  udp: true
+  network: ws
+  tls: true
+  servername: shanxp.dpdns.org
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: shanxp.dpdns.org
+- name: Hysteria2-DE-02
+  type: hysteria2
+  server: dereserv.just-cloud.org
+  port: 443
+  password: d9a3a0a2-3bbf-4c04-9ca6-95c7c8390ae7
+  sni: dereserv.just-cloud.org
+- name: VLESS-GB-05
+  type: vless
+  server: 91.193.58.215
+  port: 2083
+  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
+  udp: true
+  network: ws
+  tls: true
+  servername: vlso300.1d.mom
+  client-fingerprint: chrome
+  ws-opts:
+    path: /socks5=888:888@hkip.1d.mom:1080
+    headers:
+      Host: vlso300.1d.mom
+  packet-encoding: xudp
+- name: VLESS-US-11
+  type: vless
+  server: 27.50.48.142
+  port: 2083
+  uuid: 7014e572-847b-4d56-83ba-0d9af0fcacf4
+  udp: true
+  network: ws
+  tls: true
+  servername: chajiatv.de5.net
+  skip-cert-verify: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: chajiatv.de5.net
+- name: VLESS-FI-15
+  type: vless
+  server: 208.103.161.45
+  port: 2053
+  uuid: de3f3c66-4a10-4891-9312-dedef0193ae5
+  udp: true
+  network: ws
+  tls: true
+  servername: za12kl3.bingnet.online
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: za12kl3.bingnet.online
+  packet-encoding: xudp
+- name: VLESS-CA-10
+  type: vless
+  server: 104.17.171.60
+  port: 2083
+  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
+  udp: true
+  network: ws
+  tls: true
+  servername: vlso6.1d.mom
+  skip-cert-verify: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /socks5=888:888@hkip.1d.mom:1080
+    headers:
+      Host: vlso6.1d.mom
+- name: Hysteria2-DE-04
+  type: hysteria2
+  server: replay.wwwinternetvideo.click
+  port: 443
+  password: 2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f
+  sni: replay.wwwinternetvideo.click
+  skip-cert-verify: true
+- name: VLESS-HK-16
+  type: vless
+  server: 103.180.20.240
+  port: 8443
+  uuid: f1d247db-d7ce-4eb8-9c0d-7b10603cd0b4
+  udp: true
+  network: ws
+  tls: true
+  servername: ty986gfazs.cainiaohub.xyz
+  client-fingerprint: chrome
+  ws-opts:
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+    headers:
+      Host: ty986gfazs.cainiaohub.xyz
+- name: Hysteria2-US-01
+  type: hysteria2
+  server: do.aigh.store
+  port: 10929
+  password: 17aVvwmiSU
+  sni: do.aigh.store
+  skip-cert-verify: true
+- name: VLESS-NL-15
+  type: vless
+  server: 134.98.142.129
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+- name: VLESS-SG-10
+  type: vless
+  server: zero.csmaster.ggff.net
+  port: 443
+  uuid: 1bc380b1-cff7-446f-b13f-5c0ad29fc75a
+  udp: true
+  network: ws
+  tls: true
+  servername: zero.csmaster.ggff.net
+  ws-opts:
+    path: /
+    headers:
+      Host: zero.csmaster.ggff.net
+- name: VLESS-US-12
+  type: vless
+  server: 104.21.91.142
+  port: 443
+  uuid: 7893b302-3882-4c38-9ab6-6313f1575d1a
+  udp: true
+  network: ws
+  tls: true
+  servername: cf.udpid.org
+  client-fingerprint: chrome
+  ws-opts:
+    path: /@zyzzzoao
+    headers:
+      Host: cf.udpid.org
+- name: VLESS-SG-21
+  type: vless
+  server: 104.26.5.39
+  port: 443
+  uuid: 6680846a-8a57-4dfd-9a0e-63209cfc8535
+  udp: true
+  network: ws
+  tls: true
+  servername: support.zoom.us.yxls.eu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /sg-amz
+    headers:
+      Host: support.zoom.us.yxls.eu.cc
+  packet-encoding: xudp
+- name: VLESS-FI-25
+  type: vless
+  server: 172.66.146.2
+  port: 8443
+  uuid: 8645b9cb-0d7c-440d-b300-fd44011c5019
+  udp: true
+  network: ws
+  tls: true
+  servername: arvan.dearhossein-taktaz.ir
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: arvan.dearhossein-taktaz.ir
+  packet-encoding: xudp
+- name: Hysteria2-FR-02
+  type: hysteria2
+  server: 62.210.147.2
+  port: 43115
+  password: github.com/Alvin9999-newpac/fanqiang
+  sni: www.microsoft.com
+  skip-cert-verify: true
+- name: VLESS-FI-26
+  type: vless
+  server: 104.18.155.141
+  port: 8443
+  uuid: 8645b9cb-0d7c-440d-b300-fd44011c5019
+  udp: true
+  network: ws
+  tls: true
+  servername: arvan.dearhossein-taktaz.ir
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: arvan.dearhossein-taktaz.ir
+  packet-encoding: xudp
+- name: VLESS-SG-14
+  type: vless
+  server: speed.dulacloud.store
+  port: 443
+  uuid: b04a7ec4-c501-4d9b-b0ba-73354e4fc972
+  udp: true
+  network: ws
+  tls: true
+  servername: m.zoom.us
+  skip-cert-verify: true
+  ws-opts:
+    path: /dula
+    headers:
+      Host: speed.dulacloud.store
+- name: VLESS-FI-27
+  type: vless
+  server: 172.66.146.2
+  port: 2087
+  uuid: 8645b9cb-0d7c-440d-b300-fd44011c5019
+  udp: true
+  network: ws
+  tls: true
+  servername: arvan.dearhossein-taktaz.ir
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: arvan.dearhossein-taktaz.ir
+  packet-encoding: xudp
+- name: Hysteria2-SG-11
+  type: hysteria2
+  server: 52.221.248.75
+  port: 443
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  sni: vpn-sg-001.fastervpn.world
+  skip-cert-verify: true
+- name: VLESS-NL-18
+  type: vless
+  server: 158.101.195.198
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+- name: VLESS-FI-09
+  type: vless
+  server: 84.247.171.77
+  port: 2053
+  uuid: c7e9c591-2764-423a-afca-efbd010fd396
+  udp: true
+  network: ws
+  tls: true
+  servername: forfreeuse.rtqa.ru
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: forfreeuse.rtqa.ru
+  packet-encoding: xudp
+- name: VLESS-SG-32
+  type: vless
+  server: 170.114.46.6
+  port: 443
+  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
+  udp: true
+  network: ws
+  tls: true
+  servername: josni.hoyes.cloudns.ch
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: josni.hoyes.cloudns.ch
+- name: VLESS-FI-24
+  type: vless
+  server: 104.18.151.69
+  port: 2083
+  uuid: 8645b9cb-0d7c-440d-b300-fd44011c5019
+  udp: true
+  network: ws
+  tls: true
+  servername: arvan.dearhossein-taktaz.ir
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: arvan.dearhossein-taktaz.ir
+  packet-encoding: xudp
+- name: VLESS-FR-03
+  type: vless
+  server: link.meshbeat.online
+  port: 8444
+  uuid: 1f619326-cd93-4d6b-aebe-e0b5f8831d02
+  udp: true
+  network: ws
+  tls: true
+  servername: link.meshbeat.online
+  client-fingerprint: firefox
+  ws-opts:
+    path: /api/v1/devices/ff3c56308c/telemetry
+    headers:
+      Host: link.meshbeat.online
+  packet-encoding: xudp
+- name: VLESS-SG-09
+  type: vless
+  server: 104.16.72.110
+  port: 443
+  uuid: 6680846a-8a57-4dfd-9a0e-63209cfc8535
+  udp: true
+  network: ws
+  tls: true
+  servername: support.zoom.us.yxls.eu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /sg-amz
+    headers:
+      Host: support.zoom.us.yxls.eu.cc
+  packet-encoding: xudp
+- name: VLESS-US-23
+  type: vless
+  server: 104.21.91.142
+  port: 443
+  uuid: 7893b302-3882-4c38-9ab6-6313f1575d1a
+  udp: true
+  network: ws
+  tls: true
+  servername: cf.udpid.org
+  client-fingerprint: chrome
+  ws-opts:
+    path: /@zyzzzoao
+    headers:
+      Host: cf.udpid.org
+- name: Hysteria2-JP-02
+  type: hysteria2
+  server: 45.32.252.144
+  port: 443
+  password: 1e3a5c5fde1da9dd1358b4adeb0c4ca1
+  sni: vps.vpsv.cc
+- name: VLESS-FI-08
+  type: vless
+  server: 143.110.163.137
+  port: 2053
+  uuid: c7e9c591-2764-423a-afca-efbd010fd396
+  udp: true
+  network: ws
+  tls: true
+  servername: forfreeuse.rtqa.ru
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: forfreeuse.rtqa.ru
+  packet-encoding: xudp
+- name: Hysteria2-SG-15
+  type: hysteria2
+  server: 47.129.241.226
+  port: 443
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  sni: vpn-sg-001.fastervpn.world
+  skip-cert-verify: true
+- name: Hysteria2-SG-02
+  type: hysteria2
+  server: 64.235.45.208
+  port: 12645
+  password: 9gWt2z3KdC9VI8kAQYVvvSvhT9e05CfI
+  sni: vip-sg-1.hkd4fwmg.vip
+- name: VLESS-FI-15-2
+  type: vless
+  server: cdn1.velnaro.ir
+  port: 443
+  uuid: d2615adf-96c4-414e-9126-eedf9ec9f0c0
+  udp: true
+  network: ws
+  tls: true
+  servername: cdn1.velnaro.ir
+  ws-opts:
+    path: /happy-2026-fall
+  packet-encoding: xudp
+- name: VLESS-DE-27
+  type: vless
+  server: 104.25.116.204
+  port: 2087
+  uuid: 180e7d3a-3947-44dc-ba47-68244400f61d
+  udp: true
+  network: ws
+  tls: true
+  servername: arvan2.dearhossein-taktaz.ir
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: arvan2.dearhossein-taktaz.ir
+  packet-encoding: xudp
+- name: VLESS-CA-08
+  type: vless
+  server: 104.18.93.3
+  port: 80
+  uuid: 9b6923a6-2f2c-4cc7-a753-4272d94c7875
+  udp: true
+  network: ws
+  ws-opts:
+    path: /M1kt3L6OgXnYDodt
+    headers:
+      Host: worker3.ditib3776666.workers.dev
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+  packet-encoding: xudp
+- name: Hysteria2-PL-01
+  type: hysteria2
+  server: streambox.wwwinternetvideo.click
+  port: 443
+  password: 865e271f7c97b549b024255c9d02cebe9cc0c2c070a82b1e11bb11b9cd88dd01
+  sni: streambox.wwwinternetvideo.click
+  skip-cert-verify: true
+- name: VLESS-DE-26
+  type: vless
+  server: 172.67.225.147
+  port: 8443
+  uuid: 180e7d3a-3947-44dc-ba47-68244400f61d
+  udp: true
+  network: ws
+  tls: true
+  servername: arvan2.dearhossein-taktaz.ir
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: arvan2.dearhossein-taktaz.ir
+  packet-encoding: xudp
+- name: VLESS-US-21
+  type: vless
+  server: mtn.v2plus.ovh
+  port: 80
+  uuid: 9b6923a6-2f2c-4cc7-a753-4272d94c7875
+  udp: true
+  network: ws
+  ws-opts:
+    path: /M1kt3L6OgXnYDodt
+    headers:
+      Host: worker3.ditib3776666.workers.dev
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+  packet-encoding: xudp
+- name: VLESS-FI-28
+  type: vless
+  server: 172.67.189.28
+  port: 2083
+  uuid: 8645b9cb-0d7c-440d-b300-fd44011c5019
+  udp: true
+  network: ws
+  tls: true
+  servername: arvan.dearhossein-taktaz.ir
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: arvan.dearhossein-taktaz.ir
+  packet-encoding: xudp
+- name: VLESS-CO-01
+  type: vless
+  server: 149.130.165.97
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+- name: VLESS-HK-12
+  type: vless
+  server: 103.180.20.240
+  port: 8443
+  uuid: f1d247db-d7ce-4eb8-9c0d-7b10603cd0b4
+  udp: true
+  network: ws
+  tls: true
+  servername: ty986gfazs.cainiaohub.xyz
+  client-fingerprint: chrome
+  ws-opts:
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+    headers:
+      Host: ty986gfazs.cainiaohub.xyz
+- name: Hysteria2-NL-02
+  type: hysteria2
+  server: 46.229.243.137
+  port: 8443
+  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
+  sni: grape-turbo-fr.roxa.org
+- name: VLESS-CO-06
+  type: vless
+  server: 157.137.222.243
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+- name: VLESS-DE-29
+  type: vless
+  server: 104.19.6.247
+  port: 2087
+  uuid: 180e7d3a-3947-44dc-ba47-68244400f61d
+  udp: true
+  network: ws
+  tls: true
+  servername: arvan2.dearhossein-taktaz.ir
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: arvan2.dearhossein-taktaz.ir
+  packet-encoding: xudp
+- name: VLESS-SG-28
+  type: vless
+  server: one-for-all.levikogjgfdd.ir
+  port: 443
+  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
+  udp: true
+  network: ws
+  tls: true
+  servername: josni.hoyes.cloudns.ch
+  client-fingerprint: chrome
+  ws-opts:
+    path: /sg-melbi
+    headers:
+      Host: josni.hoyes.cloudns.ch
+- name: VLESS-DE-19
+  type: vless
+  server: node2.onepanel123.ru
+  port: 2087
+  uuid: 2edfd299-fd54-4056-9d79-3c99f19bdae1
+  udp: true
+  network: ws
+  tls: true
+  servername: node2.onepanel123.ru
+  skip-cert-verify: true
+  client-fingerprint: ios
+  ws-opts:
+    path: /de-vless-ws
+- name: VLESS-FI-04
+  type: vless
+  server: 31.59.94.24
+  port: 2053
+  uuid: c7e9c591-2764-423a-afca-efbd010fd396
+  udp: true
+  network: ws
+  tls: true
+  servername: forfreeuse.rtqa.ru
+  skip-cert-verify: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: forfreeuse.rtqa.ru
+- name: Hysteria2-US-02
+  type: hysteria2
+  server: starlink-ft.251313.xyz
+  port: 443
+  password: https://xship.best
+  sni: xship.top
+  skip-cert-verify: true
+- name: Hysteria2-KR-02
+  type: hysteria2
+  server: 150-230-252-217.liao.kdns.fr
+  port: 50160
+  password: 9cfc9458e48c028ec03ff86ebc71c744
+  sni: 150-230-252-217.liao.kdns.fr
+  skip-cert-verify: true
+- name: VLESS-FI-29
+  type: vless
+  server: 104.18.19.39
+  port: 2087
+  uuid: 8645b9cb-0d7c-440d-b300-fd44011c5019
+  udp: true
+  network: ws
+  tls: true
+  servername: arvan.dearhossein-taktaz.ir
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: arvan.dearhossein-taktaz.ir
+  packet-encoding: xudp
+- name: VLESS-SG-26
+  type: vless
+  server: speed.dulacloud.store
+  port: 443
+  uuid: b04a7ec4-c501-4d9b-b0ba-73354e4fc972
+  udp: true
+  network: ws
+  tls: true
+  servername: m.zoom.us
+  skip-cert-verify: true
+  ws-opts:
+    path: /dula
+    headers:
+      Host: speed.dulacloud.store
+- name: VLESS-NL-09
+  type: vless
+  server: relay.meshbeat.online
+  port: 8444
+  uuid: 1f619326-cd93-4d6b-aebe-e0b5f8831d02
+  udp: true
+  network: ws
+  tls: true
+  servername: relay.meshbeat.online
+  client-fingerprint: firefox
+  ws-opts:
+    path: /api/v1/devices/2545c190a7/telemetry
+    headers:
+      Host: relay.meshbeat.online
+- name: Hysteria2-JP-03
+  type: hysteria2
+  server: vip-jp-4.hkd4fwmg.vip
+  port: 32135
+  password: oU4tGn37oQ9JGmqnlTGkU3knrfAbclsq
+  sni: vip-jp-4.hkd4fwmg.vip
+  skip-cert-verify: true
+- name: VLESS-DE-23
+  type: vless
+  server: cdn4.velnaro.ir
+  port: 443
+  uuid: d2615adf-96c4-414e-9126-eedf9ec9f0c0
+  udp: true
+  network: ws
+  tls: true
+  servername: cdn4.velnaro.ir
+  ws-opts:
+    path: /happy-2026-fall
+  packet-encoding: xudp
+- name: VLESS-NL-03
+  type: vless
+  server: 141.148.232.137
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+- name: VLESS-SG-25
+  type: vless
+  server: zero.csmaster.ggff.net
+  port: 443
+  uuid: 1bc380b1-cff7-446f-b13f-5c0ad29fc75a
+  udp: true
+  network: ws
+  tls: true
+  servername: zero.csmaster.ggff.net
+  ws-opts:
+    path: /
+    headers:
+      Host: zero.csmaster.ggff.net
+- name: VLESS-CO-07
+  type: vless
+  server: 149.130.179.122
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+- name: Hysteria2-DE-03
+  type: hysteria2
+  server: player.wwwinternetvideo.click
+  port: 443
+  password: V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8
+  sni: player.wwwinternetvideo.click
+  skip-cert-verify: true
+- name: VLESS-FI-31
+  type: vless
+  server: www.canva.com
+  port: 2087
+  uuid: 8645b9cb-0d7c-440d-b300-fd44011c5019
+  udp: true
+  network: ws
+  tls: true
+  servername: arvan.dearhossein-taktaz.ir
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: arvan.dearhossein-taktaz.ir
+  packet-encoding: xudp
+- name: VLESS-FI-30
+  type: vless
+  server: 104.16.73.211
+  port: 8443
+  uuid: 8645b9cb-0d7c-440d-b300-fd44011c5019
+  udp: true
+  network: ws
+  tls: true
+  servername: arvan.dearhossein-taktaz.ir
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: arvan.dearhossein-taktaz.ir
+  packet-encoding: xudp
+- name: VLESS-FI-35
+  type: vless
+  server: 104.194.134.129
+  port: 2053
+  uuid: c7e9c591-2764-423a-afca-efbd010fd396
+  udp: true
+  network: ws
+  tls: true
+  servername: forfreeuse.rtqa.ru
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: forfreeuse.rtqa.ru
+- name: VLESS-NL-20
+  type: vless
+  server: 141.144.199.129
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+- name: VLESS-SG-19
+  type: vless
+  server: 170.114.46.6
+  port: 443
+  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
+  udp: true
+  network: ws
+  tls: true
+  servername: josni.hoyes.cloudns.ch
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: josni.hoyes.cloudns.ch
+  packet-encoding: xudp
+- name: VLESS-DE-21
+  type: vless
+  server: 104.18.24.41
+  port: 8443
+  uuid: 180e7d3a-3947-44dc-ba47-68244400f61d
+  udp: true
+  network: ws
+  tls: true
+  servername: arvan2.dearhossein-taktaz.ir
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: arvan2.dearhossein-taktaz.ir
+  packet-encoding: xudp
+- name: VLESS-FI-36
+  type: vless
+  server: 81.177.214.150
+  port: 443
+  uuid: 20595050-84c7-40e6-b9e3-cf90c99f8a4c
+  udp: true
+  network: ws
+  tls: true
+  servername: fin4.wba-pn.ru
+  client-fingerprint: firefox
+  ws-opts:
+    path: /
+- name: VLESS-FI-10
+  type: vless
+  server: 134.209.205.250
+  port: 2053
+  uuid: c7e9c591-2764-423a-afca-efbd010fd396
+  udp: true
+  network: ws
+  tls: true
+  servername: forfreeuse.rtqa.ru
+  skip-cert-verify: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: forfreeuse.rtqa.ru
+- name: VLESS-NL-16
+  type: vless
+  server: 45.91.202.232
+  port: 8444
+  uuid: 1f619326-cd93-4d6b-aebe-e0b5f8831d02
+  udp: true
+  network: ws
+  tls: true
+  servername: relay.meshbeat.online
+  client-fingerprint: firefox
+  ws-opts:
+    path: /api/v1/devices/2545c190a7/telemetry
+    headers:
+      Host: relay.meshbeat.online
+- name: VLESS-DE-12
+  type: vless
+  server: 143.47.183.183
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+- name: VLESS-DE-20
+  type: vless
+  server: 91.227.41.204
+  port: 2087
+  uuid: 2edfd299-fd54-4056-9d79-3c99f19bdae1
+  udp: true
+  network: ws
+  tls: true
+  servername: node2.onepanel123.ru
+  skip-cert-verify: true
+  client-fingerprint: firefox
+  ws-opts:
+    path: /de-vless-ws
+    headers:
+      Host: node2.onepanel123.ru
+- name: VLESS-FI-11
+  type: vless
+  server: 162.19.13.248
+  port: 2053
+  uuid: c7e9c591-2764-423a-afca-efbd010fd396
+  udp: true
+  network: ws
+  tls: true
+  servername: forfreeuse.rtqa.ru
+  skip-cert-verify: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: forfreeuse.rtqa.ru
+- name: Hysteria2-KR-01
+  type: hysteria2
+  server: 150-230-252-217.liao.kdns.fr
+  port: 50160
+  password: 9cfc9458e48c028ec03ff86ebc71c744
+  sni: 150-230-252-217.liao.kdns.fr
+- name: VLESS-NL-14
+  type: vless
+  server: 152.70.57.39
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+- name: VLESS-FI-18
+  type: vless
+  server: 172.66.146.2
+  port: 2083
+  uuid: 8645b9cb-0d7c-440d-b300-fd44011c5019
+  udp: true
+  network: ws
+  tls: true
+  servername: arvan.dearhossein-taktaz.ir
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: arvan.dearhossein-taktaz.ir
+  packet-encoding: xudp
+- name: VLESS-SG-08
+  type: vless
+  server: 172.67.69.106
+  port: 443
+  uuid: 1bc380b1-cff7-446f-b13f-5c0ad29fc75a
+  udp: true
+  network: ws
+  tls: true
+  servername: zero.csmaster.ggff.net
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: zero.csmaster.ggff.net
+- name: Hysteria2-US-03
+  type: hysteria2
+  server: 40t2.wxgqlfx.vip
+  port: 35193
+  password: 57ec0f01-0c00-4a69-ad67-937b4735640b
+  sni: 40t2.wxgqlfx.vip
+  skip-cert-verify: true
+- name: VLESS-NL-21
+  type: vless
+  server: 193.123.37.20
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+- name: VLESS-NL-22
+  type: vless
+  server: relay.meshbeat.online
+  port: 8444
+  uuid: 1f619326-cd93-4d6b-aebe-e0b5f8831d02
+  udp: true
+  network: ws
+  tls: true
+  servername: relay.meshbeat.online
+  client-fingerprint: firefox
+  ws-opts:
+    path: /api/v1/devices/2545c190a7/telemetry
+    headers:
+      Host: relay.meshbeat.online
+- name: VLESS-FI-12
+  type: vless
+  server: 46.101.163.124
+  port: 2053
+  uuid: c7e9c591-2764-423a-afca-efbd010fd396
+  udp: true
+  network: ws
+  tls: true
+  servername: forfreeuse.rtqa.ru
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: forfreeuse.rtqa.ru
+  packet-encoding: xudp
+- name: VLESS-CA-01
+  type: vless
+  server: 104.26.11.238
+  port: 80
+  uuid: 67e40783-6546-4fda-90f6-9ee3c5b2efff
+  udp: true
+  network: ws
+  ws-opts:
+    path: /CkgzR7qmHg0TxS4D
+    headers:
+      Host: worker3.ragiki7564.workers.dev
+- name: VLESS-CA-06
+  type: vless
+  server: 188.114.98.0
+  port: 80
+  uuid: 67e40783-6546-4fda-90f6-9ee3c5b2efff
+  udp: true
+  network: ws
+  ws-opts:
+    path: /CkgzR7qmHg0TxS4D
+    headers:
+      Host: worker3.ragiki7564.workers.dev
+- name: VLESS-FI-03
+  type: vless
+  server: connecto1.kolman.com.de
+  port: 8080
+  uuid: ce71b8c2-54a4-4dd0-b780-a4521b16f2fb
+  udp: true
+  network: ws
+  ws-opts:
+    path: /eQ7EK5s88mh1QkQrKDwYqh6Dbhd
+    headers:
+      Host: 1.sidin.com.de
+- name: VLESS-NL-10
+  type: vless
+  server: 84.235.165.204
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+- name: Hysteria2-HK-01
+  type: hysteria2
+  server: 202.146.222.29
+  port: 443
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: speedtest.tinkoff.ru
+  skip-cert-verify: true
+- name: VLESS-SG-04
+  type: vless
+  server: 104.16.72.110
+  port: 443
+  uuid: 6680846a-8a57-4dfd-9a0e-63209cfc8535
+  udp: true
+  network: ws
+  tls: true
+  servername: support.zoom.us.yxls.eu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /sg-amz
+    headers:
+      Host: support.zoom.us.yxls.eu.cc
+  packet-encoding: xudp
+- name: VLESS-NL-11
+  type: vless
+  server: 193.123.37.20
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+- name: VLESS-SG-05
+  type: vless
+  server: 141.193.213.21
+  port: 8443
+  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
+  udp: true
+  network: ws
+  tls: true
+  servername: josni.hoyes.cloudns.ch
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: josni.hoyes.cloudns.ch
+- name: Hysteria2-ID-01
+  type: hysteria2
+  server: 16.79.28.237
+  port: 26001
+  password: l25nJa8z0D5pT6jl
+  sni: id-ls-c-4.nebulacloud.win
+- name: VLESS-US-19
+  type: vless
+  server: cf.udpid.org
+  port: 443
+  uuid: 7893b302-3882-4c38-9ab6-6313f1575d1a
+  udp: true
+  network: ws
+  tls: true
+  servername: cf.udpid.org
+  skip-cert-verify: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /@zyzzzoao
+    headers:
+      Host: cf.udpid.org
+- name: VLESS-CO-05
+  type: vless
+  server: 157.137.220.154
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+- name: VLESS-FI-13
+  type: vless
+  server: 172.64.155.209
+  port: 8443
+  uuid: 8645b9cb-0d7c-440d-b300-fd44011c5019
+  udp: true
+  network: ws
+  tls: true
+  servername: arvan.dearhossein-taktaz.ir
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: arvan.dearhossein-taktaz.ir
+  packet-encoding: xudp
+- name: VLESS-FI-14
+  type: vless
+  server: 217.60.63.206
+  port: 2053
+  uuid: c7e9c591-2764-423a-afca-efbd010fd396
+  udp: true
+  network: ws
+  tls: true
+  servername: forfreeuse.rtqa.ru
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: forfreeuse.rtqa.ru
+  packet-encoding: xudp
+proxy-groups:
+- name: 节点选择
+  type: select
+  proxies:
+  - VLESS-SG-07
+  - Hysteria2-SG-05
+  - VLESS-NL-01
+  - VLESS-NL-02
+  - Hysteria2-JP-01
+  - VLESS-CO-02
+  - VLESS-DE-06
+  - VLESS-NL-08
+  - VLESS-US-05
+  - Hysteria2-AE-01
+  - VLESS-NL-13
+  - VLESS-CO-03
+  - VLESS-DE-05
+  - VLESS-CO-08
+  - Hysteria2-SG-01
+  - VLESS-CA-05
+  - Hysteria2-DE-02
+  - VLESS-GB-05
+  - VLESS-US-11
+  - VLESS-FI-15
+  - VLESS-CA-10
+  - Hysteria2-DE-04
+  - VLESS-HK-16
+  - Hysteria2-US-01
+  - VLESS-NL-15
+  - VLESS-SG-10
+  - VLESS-US-12
+  - VLESS-SG-21
+  - VLESS-FI-25
+  - Hysteria2-FR-02
+  - VLESS-FI-26
+  - VLESS-SG-14
+  - VLESS-FI-27
+  - Hysteria2-SG-11
+  - VLESS-NL-18
+  - VLESS-FI-09
+  - VLESS-SG-32
+  - VLESS-FI-24
+  - VLESS-FR-03
+  - VLESS-SG-09
+  - VLESS-US-23
+  - Hysteria2-JP-02
+  - VLESS-FI-08
+  - Hysteria2-SG-15
+  - Hysteria2-SG-02
+  - VLESS-FI-15-2
+  - VLESS-DE-27
+  - VLESS-CA-08
+  - Hysteria2-PL-01
+  - VLESS-DE-26
+  - VLESS-US-21
+  - VLESS-FI-28
+  - VLESS-CO-01
+  - VLESS-HK-12
+  - Hysteria2-NL-02
+  - VLESS-CO-06
+  - VLESS-DE-29
+  - VLESS-SG-28
+  - VLESS-DE-19
+  - VLESS-FI-04
+  - Hysteria2-US-02
+  - Hysteria2-KR-02
+  - VLESS-FI-29
+  - VLESS-SG-26
+  - VLESS-NL-09
+  - Hysteria2-JP-03
+  - VLESS-DE-23
+  - VLESS-NL-03
+  - VLESS-SG-25
+  - VLESS-CO-07
+  - Hysteria2-DE-03
+  - VLESS-FI-31
+  - VLESS-FI-30
+  - VLESS-FI-35
+  - VLESS-NL-20
+  - VLESS-SG-19
+  - VLESS-DE-21
+  - VLESS-FI-36
+  - VLESS-FI-10
+  - VLESS-NL-16
+  - VLESS-DE-12
+  - VLESS-DE-20
+  - VLESS-FI-11
+  - Hysteria2-KR-01
+  - VLESS-NL-14
+  - VLESS-FI-18
+  - VLESS-SG-08
+  - Hysteria2-US-03
+  - VLESS-NL-21
+  - VLESS-NL-22
+  - VLESS-FI-12
+  - VLESS-CA-01
+  - VLESS-CA-06
+  - VLESS-FI-03
+  - VLESS-NL-10
+  - Hysteria2-HK-01
+  - VLESS-SG-04
+  - VLESS-NL-11
+  - VLESS-SG-05
+  - Hysteria2-ID-01
+  - VLESS-US-19
+  - VLESS-CO-05
+  - VLESS-FI-13
+  - VLESS-FI-14
+rules:
+- MATCH,节点选择
