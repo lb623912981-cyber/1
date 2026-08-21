@@ -43,15 +43,16 @@ output.extend([
     "- name: 节点选择",
     "  type: select",
     "  proxies:",
-    "  - 自动选择",
+    "  - Telegram自动选择",
 ])
 output.extend(f"  - {name}" for name in names)
 output.extend([
-    "- name: 自动选择",
+    "- name: Telegram自动选择",
     "  type: url-test",
-    "  url: https://www.gstatic.com/generate_204",
+    "  url: https://telegram.org",
     "  interval: 300",
-    "  tolerance: 50",
+    "  tolerance: 100",
+    "  lazy: false",
     "  proxies:",
 ])
 output.extend(f"  - {name}" for name in names)

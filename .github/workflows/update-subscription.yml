@@ -59,7 +59,7 @@ jobs:
           python3 build_top10.py speedtest_all.yaml single_node_test.yaml
           grep -q '^proxy-groups:$' single_node_test.yaml
           grep -q '^- name: 节点选择$' single_node_test.yaml
-          grep -q '^- name: 自动选择$' single_node_test.yaml
+          grep -q '^- name: Telegram自动选择$' single_node_test.yaml
           echo "updated=true" >> "$GITHUB_OUTPUT"
 
       - name: Commit updated subscription

@@ -97,7 +97,7 @@ proxy-groups:
 - name: 节点选择
   type: select
   proxies:
-  - 自动选择
+  - Telegram自动选择
   - "\U0001F1F3\U0001F1F1 NL 001 | ⬇️ 3.40MB/s"
   - "\U0001F1F3\U0001F1F1 NL 002 | ⬇️ 3.36MB/s"
   - "\U0001F1F7\U0001F1F4 RO 001 | ⬇️ 3.32MB/s"
@@ -108,11 +108,12 @@ proxy-groups:
   - "\U0001F1E9\U0001F1EA DE 002 | ⬇️ 2.59MB/s"
   - "\U0001F1E9\U0001F1EA DE 003 | ⬇️ 2.11MB/s"
   - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 1.84MB/s"
-- name: 自动选择
+- name: Telegram自动选择
   type: url-test
-  url: https://www.gstatic.com/generate_204
+  url: https://telegram.org
   interval: 300
-  tolerance: 50
+  tolerance: 100
+  lazy: false
   proxies:
   - "\U0001F1F3\U0001F1F1 NL 001 | ⬇️ 3.40MB/s"
   - "\U0001F1F3\U0001F1F1 NL 002 | ⬇️ 3.36MB/s"
