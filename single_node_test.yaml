@@ -1,9 +1,128 @@
-proxy-providers: {}
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
 proxies:
-- name: "\U0001F1F3\U0001F1F1 NL 001 | ⬇️ 0.38MB/s"
+- name: "\U0001F1F3\U0001F1F1 NL 001 | ⬇️ 3.40MB/s"
+  password: None
+  port: 9002
+  server: 84.17.47.146
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+- name: "\U0001F1F3\U0001F1F1 NL 002 | ⬇️ 3.36MB/s"
   port: 9002
   server: 84.17.47.147
   skip-cert-verify: true
   tls: true
   type: http
   udp: true
+- name: "\U0001F1F7\U0001F1F4 RO 001 | ⬇️ 3.32MB/s"
+  password: ""
+  port: 9002
+  server: 193.176.84.38
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: ""
+- name: "\U0001F1F7\U0001F1F4 RO 002 | ⬇️ 3.12MB/s"
+  port: 9002
+  server: 193.176.84.27
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: true
+  type: http
+- name: "\U0001F1F7\U0001F1F4 RO 003 | ⬇️ 2.99MB/s"
+  port: 9002
+  server: 193.176.84.39
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: "\U0001F1F3\U0001F1F1 NL 003 | ⬇️ 2.92MB/s"
+  port: 9002
+  server: 84.17.47.150
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+- alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  down: "1000"
+  name: "\U0001F1E9\U0001F1EA DE 001 | ⬇️ 2.69MB/s"
+  port: 20088
+  protocol: udp
+  server: 5.83.129.153
+  skip-cert-verify: true
+  sni: apple.com
+  type: hysteria
+  up: "500"
+- alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  auth_str: dongtaiwang.com
+  down: 55 Mbps
+  name: "\U0001F1E9\U0001F1EA DE 002 | ⬇️ 2.59MB/s"
+  port: 26691
+  protocol: udp
+  server: 5.83.129.143
+  skip-cert-verify: true
+  sni: apple.com
+  type: hysteria
+  udp: true
+  up: 11 Mbps
+- alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  auth_str: dongtaiwang.com
+  down: 1000
+  name: "\U0001F1E9\U0001F1EA DE 003 | ⬇️ 2.11MB/s"
+  port: 54177
+  protocol: udp
+  server: 5.83.129.90
+  skip-cert-verify: true
+  sni: apple.com
+  type: hysteria
+  udp: true
+  up: 500
+- name: "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 1.84MB/s"
+  port: 9002
+  server: 156.146.59.4
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+proxy-groups:
+- name: 节点选择
+  type: select
+  proxies:
+  - 自动选择
+  - "\U0001F1F3\U0001F1F1 NL 001 | ⬇️ 3.40MB/s"
+  - "\U0001F1F3\U0001F1F1 NL 002 | ⬇️ 3.36MB/s"
+  - "\U0001F1F7\U0001F1F4 RO 001 | ⬇️ 3.32MB/s"
+  - "\U0001F1F7\U0001F1F4 RO 002 | ⬇️ 3.12MB/s"
+  - "\U0001F1F7\U0001F1F4 RO 003 | ⬇️ 2.99MB/s"
+  - "\U0001F1F3\U0001F1F1 NL 003 | ⬇️ 2.92MB/s"
+  - "\U0001F1E9\U0001F1EA DE 001 | ⬇️ 2.69MB/s"
+  - "\U0001F1E9\U0001F1EA DE 002 | ⬇️ 2.59MB/s"
+  - "\U0001F1E9\U0001F1EA DE 003 | ⬇️ 2.11MB/s"
+  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 1.84MB/s"
+- name: 自动选择
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "\U0001F1F3\U0001F1F1 NL 001 | ⬇️ 3.40MB/s"
+  - "\U0001F1F3\U0001F1F1 NL 002 | ⬇️ 3.36MB/s"
+  - "\U0001F1F7\U0001F1F4 RO 001 | ⬇️ 3.32MB/s"
+  - "\U0001F1F7\U0001F1F4 RO 002 | ⬇️ 3.12MB/s"
+  - "\U0001F1F7\U0001F1F4 RO 003 | ⬇️ 2.99MB/s"
+  - "\U0001F1F3\U0001F1F1 NL 003 | ⬇️ 2.92MB/s"
+  - "\U0001F1E9\U0001F1EA DE 001 | ⬇️ 2.69MB/s"
+  - "\U0001F1E9\U0001F1EA DE 002 | ⬇️ 2.59MB/s"
+  - "\U0001F1E9\U0001F1EA DE 003 | ⬇️ 2.11MB/s"
+  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 1.84MB/s"
+rules:
+- MATCH,节点选择

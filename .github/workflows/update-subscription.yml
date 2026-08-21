@@ -44,19 +44,22 @@ jobs:
           set -euo pipefail
           test -n "${CLASH_SOURCE_URL:-}"
           set +e
-          ./clash-speedtest -c "$CLASH_SOURCE_URL" -concurrent 12 -download-size 3145728 -timeout 3s -max-latency 1500ms -max-packet-loss 70 -min-download-speed 0.2 -output single_node_test.new.yaml
+          ./clash-speedtest -c "$CLASH_SOURCE_URL" -concurrent 12 -download-size 10485760 -timeout 5s -max-latency 3s -max-packet-loss 100 -min-download-speed 0 -output speedtest_all.yaml
           speedtest_exit=$?
           set -e
-          if [ "$speedtest_exit" -ne 0 ] || [ ! -s single_node_test.new.yaml ]; then
+          if [ "$speedtest_exit" -ne 0 ] || [ ! -s speedtest_all.yaml ]; then
             echo "updated=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          if grep -Eq '^proxies:[[:space:]]*\[\][[:space:]]*$' single_node_test.new.yaml || ! grep -Eq '^[[:space:]]*-[[:space:]]+name:' single_node_test.new.yaml; then
+          if grep -Eq '^proxies:[[:space:]]*\[\][[:space:]]*$' speedtest_all.yaml || ! grep -Eq '^[[:space:]]*-[[:space:]]+name:' speedtest_all.yaml; then
             echo "No usable proxies were exported. Preserving the previous subscription."
             echo "updated=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          mv -f single_node_test.new.yaml single_node_test.yaml
+          python3 build_top10.py speedtest_all.yaml single_node_test.yaml
+          grep -q '^proxy-groups:$' single_node_test.yaml
+          grep -q '^- name: 节点选择$' single_node_test.yaml
+          grep -q '^- name: 自动选择$' single_node_test.yaml
           echo "updated=true" >> "$GITHUB_OUTPUT"
 
       - name: Commit updated subscription

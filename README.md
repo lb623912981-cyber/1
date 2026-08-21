@@ -1,6 +1,6 @@
 # Clash Speedtest Cloud
 
-GitHub Actions runs the Clash speed test every day at 04:00 GMT+8 and publishes the filtered YAML at a stable URL. If no usable proxy is found, the previous subscription remains unchanged.
+GitHub Actions runs a full Clash speed test every day at 04:00 GMT+8, keeps the ten fastest nodes, and publishes a directly importable Clash configuration at a stable URL. If no usable proxy is found, the previous subscription remains unchanged.
 
 Subscription URL:
 
