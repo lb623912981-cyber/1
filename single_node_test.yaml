@@ -1,0 +1,9 @@
+proxy-providers: {}
+proxies:
+- name: "\U0001F1F3\U0001F1F1 NL 001 | ⬇️ 0.38MB/s"
+  port: 9002
+  server: 84.17.47.147
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
