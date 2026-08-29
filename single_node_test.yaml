@@ -3,103 +3,115 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 45.45MB/s"
-  password: ""
-  port: 9002
-  server: 138.199.35.207
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-  username: ""
-- name: "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 44.64MB/s"
-  password: "null"
-  port: 9002
-  server: 138.199.35.212
-  skip-cert-verify: true
-  sni: 138.199.35.212
-  tls: true
-  type: http
-  username: "null"
-- name: "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 44.28MB/s"
-  port: 9002
-  server: 138.199.35.220
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-- name: "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 43.61MB/s"
+- name: "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 55.79MB/s"
+  network: ws
+  port: 2082
+  server: 172.64.150.28
+  type: vless
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  ws-opts:
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
+    path: /fp
+- name: "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 25.96MB/s"
   password: None
-  port: 9002
-  server: 138.199.35.215
+  port: 443
+  server: purecambogiasl.live
   skip-cert-verify: true
   tls: true
   type: http
   username: null
-- name: "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 43.16MB/s"
-  password: ""
-  port: 9002
-  server: 138.199.35.210
-  skip-cert-verify: true
+- name: "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 25.94MB/s"
+  port: 443
+  server: purposebydesig.club
+  sni: purposebydesig.club
   tls: true
   type: http
-  udp: true
-  username: ""
-- name: "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 43.03MB/s"
-  password: "null"
-  port: 9002
-  server: 138.199.35.199
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: "null"
-- name: "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 42.99MB/s"
-  password: ""
-  port: 9002
-  server: 138.199.35.218
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: ""
-- name: "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 42.74MB/s"
-  port: 9002
-  server: 138.199.35.211
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-- name: "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 42.24MB/s"
+- name: "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 25.91MB/s"
   password: None
-  port: 9002
-  server: 138.199.35.197
-  skip-cert-verify: true
-  sni: 138.199.35.197
-  tls: true
-  type: http
-  username: "null"
-- name: "\U0001F1FA\U0001F1F8 US 010 | ⬇️ 42.18MB/s"
-  password: None
-  port: 9002
-  server: 138.199.35.208
-  skip-cert-verify: true
+  port: 443
+  server: crosscards.site
+  skip-cert-verify: false
   tls: true
   type: http
   username: null
+- name: "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 25.85MB/s"
+  port: 443
+  server: jewelscollecti.icu
+  skip-cert-verify: true
+  sni: jewelscollecti.icu
+  tls: true
+  type: http
+- name: "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 24.97MB/s"
+  password: null
+  port: 443
+  server: efr-marktplatz.club
+  skip-cert-verify: false
+  tls: true
+  type: http
+  username: null
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 24.91MB/s"
+  network: tcp
+  port: 51486
+  reality-opts:
+    public-key: UB7YAOLuxMOFBejs3SSOIaiYCYk2X4UZH5j9iWbbIS4
+    short-id: 2576868adedf9fc0
+  server: 45.33.107.237
+  servername: www.nvidia.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 72e4f3f6-3382-4a68-9817-8d65927e9bbd
+- name: "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 24.85MB/s"
+  port: 443
+  server: carolinafreigh.fun
+  sni: carolinafreigh.fun
+  tls: true
+  type: http
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  http-opts:
+    headers: {}
+    path:
+    - /
+  name: "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 23.71MB/s"
+  network: tcp
+  port: 43595
+  reality-opts:
+    public-key: waNzNRIL_3TaF3UfgeAy1M5r8YVUeOA0nx3jPiXYZSE
+    short-id: e482c0320674c651
+  server: 45.33.62.166
+  servername: www.amd.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2642f590-2bce-4031-8f93-7eed983621f5
+  xudp: true
+- name: "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 20.15MB/s"
+  port: 9002
+  server: 138.199.35.195
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
 proxy-groups:
 - name: 节点选择
   type: select
   proxies:
   - Telegram自动选择
-  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 45.45MB/s"
-  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 44.64MB/s"
-  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 44.28MB/s"
-  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 43.61MB/s"
-  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 43.16MB/s"
-  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 43.03MB/s"
-  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 42.99MB/s"
-  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 42.74MB/s"
-  - "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 42.24MB/s"
-  - "\U0001F1FA\U0001F1F8 US 010 | ⬇️ 42.18MB/s"
+  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 55.79MB/s"
+  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 25.96MB/s"
+  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 25.94MB/s"
+  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 25.91MB/s"
+  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 25.85MB/s"
+  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 24.97MB/s"
+  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 24.91MB/s"
+  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 24.85MB/s"
+  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 23.71MB/s"
+  - "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 20.15MB/s"
 - name: Telegram自动选择
   type: url-test
   url: https://telegram.org
@@ -107,15 +119,15 @@ proxy-groups:
   tolerance: 100
   lazy: false
   proxies:
-  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 45.45MB/s"
-  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 44.64MB/s"
-  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 44.28MB/s"
-  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 43.61MB/s"
-  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 43.16MB/s"
-  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 43.03MB/s"
-  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 42.99MB/s"
-  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 42.74MB/s"
-  - "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 42.24MB/s"
-  - "\U0001F1FA\U0001F1F8 US 010 | ⬇️ 42.18MB/s"
+  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 55.79MB/s"
+  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 25.96MB/s"
+  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 25.94MB/s"
+  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 25.91MB/s"
+  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 25.85MB/s"
+  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 24.97MB/s"
+  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 24.91MB/s"
+  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 24.85MB/s"
+  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 23.71MB/s"
+  - "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 20.15MB/s"
 rules:
 - MATCH,节点选择
