@@ -1,0 +1,71 @@
+name: Hourly Proxy Speed Test
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: hourly-proxy-speed-test
+  cancel-in-progress: false
+
+jobs:
+  speedtest:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Check script
+        run: python -m unittest discover -s tests -v
+
+      - name: Install pinned Mihomo
+        shell: bash
+        env:
+          MIHOMO_VERSION: v1.19.30
+          MIHOMO_SHA256: cbe553d0319a414bd3a372c5976a252155b2c4882b66bce88a4d6bba9571a553
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/speedtest-bin"
+          archive="$RUNNER_TEMP/speedtest-bin/mihomo.gz"
+          curl --disable --fail --silent --show-error --location --retry 3 \
+            --connect-timeout 15 --max-time 180 \
+            "https://github.com/MetaCubeX/mihomo/releases/download/${MIHOMO_VERSION}/mihomo-linux-amd64-v1-${MIHOMO_VERSION}.gz" \
+            --output "$archive"
+          printf '%s  %s\n' "$MIHOMO_SHA256" "$archive" | sha256sum --check --strict
+          gzip --decompress --stdout "$archive" > "$RUNNER_TEMP/speedtest-bin/mihomo"
+          chmod 0755 "$RUNNER_TEMP/speedtest-bin/mihomo"
+          echo "$RUNNER_TEMP/speedtest-bin" >> "$GITHUB_PATH"
+
+      - name: Measure subscription nodes
+        env:
+          SUBSCRIPTION_URL: ${{ secrets.SUBSCRIPTION_URL || secrets.CLASH_SOURCE_URL }}
+          DOWNLOAD_MIB: ${{ vars.DOWNLOAD_MIB || '10' }}
+          TEST_TIMEOUT: ${{ vars.TEST_TIMEOUT || '12' }}
+          MAX_NODES: ${{ vars.MAX_NODES || '200' }}
+          RUN_BUDGET_SECONDS: ${{ vars.RUN_BUDGET_SECONDS || '1800' }}
+          NODE_FILTER: ${{ vars.NODE_FILTER }}
+        run: python speedtest.py
+
+      - name: Retain measurement reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: proxy-speedtest-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            results/summary.md
+            results/results.csv
+            results/results.json
+          if-no-files-found: warn
+          retention-days: 30
