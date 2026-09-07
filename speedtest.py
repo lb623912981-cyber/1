@@ -2,6 +2,7 @@
 """Measure subscription nodes through an isolated Mihomo instance. Python 3.11+."""
 
 import argparse
+import base64
 import csv
 import hashlib
 import html
@@ -155,6 +156,26 @@ def read_subscription(local_file):
     return data
 
 
+def load_subscription(local_file):
+    try:
+        return read_subscription(local_file), {"subscription_source": "file" if local_file else "live"}
+    except SpeedtestError as exc:
+        backup_text = os.environ.get("SUBSCRIPTION_BACKUP", "")
+        if local_file or not backup_text:
+            raise
+        try:
+            backup = json.loads(backup_text)
+            data = base64.b64decode(backup["content_b64"], validate=True)
+            captured_at = datetime.fromisoformat(backup["captured_at"]).isoformat(timespec="seconds")
+            if not data.strip() or len(data) > MAX_SUBSCRIPTION_BYTES:
+                raise ValueError
+        except (ValueError, KeyError, TypeError):
+            raise SpeedtestError("Subscription download failed and SUBSCRIPTION_BACKUP is invalid.") from None
+        print("Live subscription unavailable; using the encrypted subscription backup.", flush=True)
+        return data, {"subscription_source": "backup", "backup_captured_at": captured_at,
+                      "subscription_warning": str(exc)}
+
+
 class Mihomo:
     def __init__(self, binary, subscription):
         self.binary = binary
@@ -188,7 +209,7 @@ class Mihomo:
             config = directory / "config.json"
             config.write_text(json.dumps(make_config(proxy_port, api_port, self.token)), encoding="utf-8")
             child_env = dict(os.environ)
-            for key in ("SUBSCRIPTION_URL", "CLASH_SOURCE_URL", "GITHUB_TOKEN", "GH_TOKEN"):
+            for key in ("SUBSCRIPTION_URL", "CLASH_SOURCE_URL", "SUBSCRIPTION_BACKUP", "GITHUB_TOKEN", "GH_TOKEN"):
                 child_env.pop(key, None)
             self.process = subprocess.Popen(
                 [self.binary, "-d", str(directory), "-f", str(config)], cwd=directory,
@@ -270,6 +291,10 @@ def write_reports(output, metadata, rows):
              "Partial samples reached the time limit; they are estimates."), ""]
     if metadata.get("endpoint_check"):
         lines += [f"Direct endpoint check: {metadata['endpoint_check']['status']} (1 KiB probe only).", ""]
+    lines += [f"Subscription source: {metadata.get('subscription_source', 'unavailable')}", ""]
+    if metadata.get("subscription_source") == "backup":
+        lines += [f"Backup captured at: {markdown_cell(metadata['backup_captured_at'])}", "",
+                  f"Live refresh failed: {markdown_cell(metadata['subscription_warning'])}", ""]
     if metadata.get("error"):
         lines += [f"Run error: {markdown_cell(metadata['error'])}", ""]
     lines += ["| Node | Type | Status | Mbps | MiB/s | HTTP TTFB ms | Received MiB |",
@@ -322,7 +347,8 @@ def run(args):
         if not binary or not shutil.which("curl"):
             raise SpeedtestError("Mihomo and curl must both be installed.")
         binary = str(Path(binary).resolve())
-        subscription = read_subscription(args.subscription_file)
+        subscription, subscription_info = load_subscription(args.subscription_file)
+        metadata.update(subscription_info)
         metadata["subscription_sha256"] = hashlib.sha256(subscription).hexdigest()
         metadata["endpoint_check"] = measure("", 1024, min(args.timeout, 6))
         with Mihomo(binary, subscription) as core:

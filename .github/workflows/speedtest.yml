@@ -51,6 +51,7 @@ jobs:
       - name: Measure subscription nodes
         env:
           SUBSCRIPTION_URL: ${{ secrets.SUBSCRIPTION_URL || secrets.CLASH_SOURCE_URL }}
+          SUBSCRIPTION_BACKUP: ${{ secrets.SUBSCRIPTION_BACKUP }}
           DOWNLOAD_MIB: ${{ vars.DOWNLOAD_MIB || '10' }}
           TEST_TIMEOUT: ${{ vars.TEST_TIMEOUT || '12' }}
           MAX_NODES: ${{ vars.MAX_NODES || '200' }}

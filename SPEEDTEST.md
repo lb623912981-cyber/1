@@ -12,6 +12,12 @@
 
 如果你使用原来的仓库，其中已有每日运行的 `Update Clash Subscription` 工作流，这两份工作流会各自运行。只需要新测速任务时，可以在 Actions 中停用旧工作流，避免重复消耗流量。
 
+### 订阅网站无法从 GitHub 访问时
+
+部分订阅网站会拒绝 GitHub 机房访问。支持额外配置 `SUBSCRIPTION_BACKUP` Secret，存放加密保存的节点快照。任务仍优先下载最新订阅，仅在下载失败时使用备份；报告明确显示 `Subscription source: backup`、备份时间和刷新失败原因。备份不会自动更新，节点变化后需要更新该 Secret。
+
+该 Secret 的内容是 JSON，包含 `captured_at`（ISO 8601 时间）和 `content_b64`（对原始订阅文件字节进行 Base64 编码）。它应通过 GitHub Secrets 保存，不要提交到公开仓库。GitHub 单个 Secret 有大小限制，只适合较小的订阅；也可以改用能访问订阅网站的 self-hosted runner。
+
 ## 结果怎么看
 
 - `Mbps`：实际收到的字节数 × 8 ÷ 总请求秒数 ÷ 1,000,000，包含连接耗时，是短时单连接下载平均速度。`MiB/s` 是每秒二进制兆字节。

@@ -1,3 +1,4 @@
+import base64
 import http.client
 import importlib.util
 import json
@@ -101,6 +102,36 @@ class SpeedtestTests(unittest.TestCase):
         request = urllib.request.Request("https://example.com/subscription")
         with self.assertRaises(speedtest.SpeedtestError):
             handler.redirect_request(request, None, 302, "Found", {}, "http://example.com/private")
+
+    def test_live_subscription_is_preferred_over_backup(self):
+        with (patch.object(speedtest, "read_subscription", return_value=b"live"),
+              patch.dict(os.environ, {"SUBSCRIPTION_BACKUP": "invalid backup"})):
+            payload, info = speedtest.load_subscription(None)
+        self.assertEqual(payload, b"live")
+        self.assertEqual(info["subscription_source"], "live")
+
+    def test_backup_is_explicitly_labelled_when_live_download_fails(self):
+        backup = json.dumps({"captured_at": "2026-09-07T15:00:00+00:00",
+                             "content_b64": base64.b64encode(b"fixture-data").decode()})
+        with (patch.object(speedtest, "read_subscription", side_effect=speedtest.SpeedtestError("HTTP 403")),
+              patch.dict(os.environ, {"SUBSCRIPTION_BACKUP": backup})):
+            payload, info = speedtest.load_subscription(None)
+        self.assertEqual(payload, b"fixture-data")
+        self.assertEqual(info["subscription_source"], "backup")
+        self.assertEqual(info["subscription_warning"], "HTTP 403")
+        self.assertEqual(info["backup_captured_at"], "2026-09-07T15:00:00+00:00")
+
+    def test_missing_backup_preserves_subscription_failure(self):
+        with (patch.object(speedtest, "read_subscription", side_effect=speedtest.SpeedtestError("HTTP 403")),
+              patch.dict(os.environ, {"SUBSCRIPTION_BACKUP": ""}),
+              self.assertRaisesRegex(speedtest.SpeedtestError, "HTTP 403")):
+            speedtest.load_subscription(None)
+
+    def test_explicit_local_file_does_not_use_a_remote_backup(self):
+        with (patch.object(speedtest, "read_subscription", side_effect=speedtest.SpeedtestError("Missing file")),
+              patch.dict(os.environ, {"SUBSCRIPTION_BACKUP": "invalid backup"}),
+              self.assertRaisesRegex(speedtest.SpeedtestError, "Missing file")):
+            speedtest.load_subscription(Path("missing"))
 
     def test_hourly_rotation_covers_the_tail_when_budget_is_short(self):
         nodes = [{"name": f"node-{i:03}"} for i in range(200)]
