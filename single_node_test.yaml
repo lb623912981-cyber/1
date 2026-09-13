@@ -3,100 +3,40 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 44.98MB/s"
-  port: 9002
-  server: 138.199.35.210
-  skip-cert-verify: true
-  tfo: false
-  tls: true
-  type: http
-- name: "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 44.62MB/s"
-  password: null
-  port: 9002
-  server: 138.199.35.220
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: null
-- name: "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 44.59MB/s"
-  password: "null"
-  port: 9002
-  server: 138.199.35.202
-  skip-cert-verify: true
-  sni: 138.199.35.202
-  tls: true
-  type: http
-  username: "null"
-- name: "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 44.33MB/s"
-  password: None
-  port: 9002
-  server: 138.199.35.217
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: null
-- name: "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 44.28MB/s"
-  password: None
-  port: 9002
-  server: 138.199.35.209
-  skip-cert-verify: true
-  sni: 138.199.35.209
-  tls: true
-  type: http
-  username: "null"
-- name: "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 44.23MB/s"
-  password: null
-  port: 9002
-  server: 138.199.35.197
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: null
-- name: "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 43.90MB/s"
-  port: 9002
-  server: 138.199.35.218
-  skip-cert-verify: true
+- name: "\U0001F1F3\U0001F1F1 NL 001 | ⬇️ 5.70MB/s"
+  port: 443
+  server: 157.22.183.72
+  sub_tag: R002-260618
   tls: true
   type: http
   udp: true
-- name: "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 43.81MB/s"
-  port: 9002
-  server: 138.199.35.211
-  skip-cert-verify: true
-  tls: true
-  type: http
+- alpn:
+  - h3
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  name: "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 2.34MB/s"
+  network: ws
+  password: humanity
+  port: 443
+  server: join-telegram-channel-tirexnet.trex.kdns.fr
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  sub_tag: S001-260618
+  type: trojan
   udp: true
-- name: "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 43.81MB/s"
-  password: null
-  port: 9002
-  server: 138.199.35.208
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: null
-- name: "\U0001F1FA\U0001F1F8 US 010 | ⬇️ 43.80MB/s"
-  password: ""
-  port: 9002
-  server: 138.199.35.205
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: ""
+  ws-opts:
+    headers:
+      User-Agent: Mozilla/5.0 (Linux; Android 8.0.0; WAS-LX3 Build/HUAWEIWAS-LX3)
+        AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
+    path: /assignment
 proxy-groups:
 - name: 节点选择
   type: select
   proxies:
   - Telegram自动选择
-  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 44.98MB/s"
-  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 44.62MB/s"
-  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 44.59MB/s"
-  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 44.33MB/s"
-  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 44.28MB/s"
-  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 44.23MB/s"
-  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 43.90MB/s"
-  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 43.81MB/s"
-  - "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 43.81MB/s"
-  - "\U0001F1FA\U0001F1F8 US 010 | ⬇️ 43.80MB/s"
+  - "\U0001F1F3\U0001F1F1 NL 001 | ⬇️ 5.70MB/s"
+  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 2.34MB/s"
 - name: Telegram自动选择
   type: url-test
   url: https://telegram.org
@@ -104,15 +44,7 @@ proxy-groups:
   tolerance: 100
   lazy: false
   proxies:
-  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 44.98MB/s"
-  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 44.62MB/s"
-  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 44.59MB/s"
-  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 44.33MB/s"
-  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 44.28MB/s"
-  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 44.23MB/s"
-  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 43.90MB/s"
-  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 43.81MB/s"
-  - "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 43.81MB/s"
-  - "\U0001F1FA\U0001F1F8 US 010 | ⬇️ 43.80MB/s"
+  - "\U0001F1F3\U0001F1F1 NL 001 | ⬇️ 5.70MB/s"
+  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 2.34MB/s"
 rules:
 - MATCH,节点选择
