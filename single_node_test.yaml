@@ -3,7 +3,7 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: "\U0001F1F3\U0001F1F1 NL 001 | ⬇️ 5.70MB/s"
+- name: "\U0001F1F3\U0001F1F1 NL 001 | ⬆️ 0.00MB/s"
   port: 443
   server: 157.22.183.72
   sub_tag: R002-260618
@@ -14,29 +14,26 @@ proxies:
   - h3
   - h2
   - http/1.1
-  client-fingerprint: chrome
-  name: "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 2.34MB/s"
+  name: "\U0001F1E8\U0001F1E6 CA 001 | ⬆️ 0.00MB/s"
   network: ws
   password: humanity
   port: 443
   server: join-telegram-channel-tirexnet.trex.kdns.fr
-  skip-cert-verify: false
+  skip-cert-verify: true
   sni: www.ignitelimit.com
-  sub_tag: S001-260618
   type: trojan
   udp: true
   ws-opts:
     headers:
-      User-Agent: Mozilla/5.0 (Linux; Android 8.0.0; WAS-LX3 Build/HUAWEIWAS-LX3)
-        AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
+      Host: www.ignitelimit.com
     path: /assignment
 proxy-groups:
 - name: 节点选择
   type: select
   proxies:
   - Telegram自动选择
-  - "\U0001F1F3\U0001F1F1 NL 001 | ⬇️ 5.70MB/s"
-  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 2.34MB/s"
+  - "\U0001F1F3\U0001F1F1 NL 001 | ⬆️ 0.00MB/s"
+  - "\U0001F1E8\U0001F1E6 CA 001 | ⬆️ 0.00MB/s"
 - name: Telegram自动选择
   type: url-test
   url: https://telegram.org
@@ -44,7 +41,7 @@ proxy-groups:
   tolerance: 100
   lazy: false
   proxies:
-  - "\U0001F1F3\U0001F1F1 NL 001 | ⬇️ 5.70MB/s"
-  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 2.34MB/s"
+  - "\U0001F1F3\U0001F1F1 NL 001 | ⬆️ 0.00MB/s"
+  - "\U0001F1E8\U0001F1E6 CA 001 | ⬆️ 0.00MB/s"
 rules:
 - MATCH,节点选择
