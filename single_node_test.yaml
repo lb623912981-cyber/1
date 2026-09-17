@@ -3,117 +3,99 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 23.52MB/s"
-  network: ws
-  packet-encoding: xudp
-  port: 8880
-  server: 104.18.46.46
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  sub_tag: A004-260618
-  type: vless
+- name: "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 28.00MB/s"
+  port: 9443
+  server: 38.95.111.226
+  skip-cert-verify: true
+  tls: true
+  type: http
   udp: true
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  ws-opts:
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/66.0.3359.139 Safari/537.36
-    path: /?ed=2560security=tls
-  xudp: true
-- name: "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 18.86MB/s"
-  password: "null"
+- name: "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 27.16MB/s"
+  password: null
   port: 9002
   server: 138.199.35.211
   skip-cert-verify: true
   tls: true
   type: http
-  udp: true
-  username: "null"
-- name: "\U0001F1E8\U0001F1E6 CA 002 | ⬇️ 18.79MB/s"
-  network: ws
-  packet-encoding: xudp
-  port: 80
-  server: 104.18.46.46
-  sub_tag: A004-260618
-  type: vless
-  udp: true
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  ws-opts:
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/52.0.2743.116 Safari/537.36
-    path: /?ed=2560security=tls
-  xudp: true
-- name: "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 18.78MB/s"
-  password: "null"
-  port: 9002
-  server: 138.199.35.207
-  skip-cert-verify: true
-  sni: 138.199.35.207
-  tls: true
-  type: http
-  username: "null"
-- name: "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 18.76MB/s"
+  username: null
+- name: "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 27.05MB/s"
+  password: null
   port: 9002
   server: 138.199.35.205
   skip-cert-verify: true
   tls: true
   type: http
-- name: "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 18.75MB/s"
-  password: ""
+  username: null
+- name: "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 26.92MB/s"
   port: 9002
-  server: 138.199.35.219
+  server: 138.199.35.216
   skip-cert-verify: true
   tls: true
   type: http
-  username: ""
-- name: "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 18.61MB/s"
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 26.87MB/s"
+  password: None
+  port: 9002
+  server: 138.199.35.195
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: null
+- down: 1000
+  fingerprint: ee961590f9558c24cef02e44d1f54e9cd21fc929ae627f2e18fe5b3d67ca5561
+  name: "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 26.77MB/s"
+  password: e2c0c417-ba4c-4c72-8d8d-c3ca05a45c98
+  port: 443
+  server: lxyus3.777078.xyz
+  skip-cert-verify: true
+  sni: iosapps.itunes.apple.com
+  type: hysteria2
+  udp: true
+  up: 100
+- name: "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 26.75MB/s"
+  port: 9002
+  server: 138.199.35.212
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: http
+- name: "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 26.71MB/s"
+  port: 9002
+  server: 138.199.35.215
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 26.66MB/s"
   port: 9002
   server: 138.199.35.210
   skip-cert-verify: true
   tfo: false
   tls: true
   type: http
-- name: "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 18.52MB/s"
-  password: "null"
+- name: "\U0001F1FA\U0001F1F8 US 010 | ⬇️ 26.52MB/s"
+  password: None
   port: 9002
-  server: 138.199.35.202
-  skip-cert-verify: true
-  sni: 138.199.35.202
-  tls: true
-  type: http
-  username: "null"
-- name: "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 18.50MB/s"
-  password: "null"
-  port: "9002"
   server: 138.199.35.200
   skip-cert-verify: true
   tls: true
   type: http
-  username: "null"
-- name: "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 18.48MB/s"
-  port: 9002
-  server: 138.199.35.206
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
+  username: null
 proxy-groups:
 - name: 节点选择
   type: select
   proxies:
   - Telegram自动选择
-  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 23.52MB/s"
-  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 18.86MB/s"
-  - "\U0001F1E8\U0001F1E6 CA 002 | ⬇️ 18.79MB/s"
-  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 18.78MB/s"
-  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 18.76MB/s"
-  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 18.75MB/s"
-  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 18.61MB/s"
-  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 18.52MB/s"
-  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 18.50MB/s"
-  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 18.48MB/s"
+  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 28.00MB/s"
+  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 27.16MB/s"
+  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 27.05MB/s"
+  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 26.92MB/s"
+  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 26.87MB/s"
+  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 26.77MB/s"
+  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 26.75MB/s"
+  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 26.71MB/s"
+  - "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 26.66MB/s"
+  - "\U0001F1FA\U0001F1F8 US 010 | ⬇️ 26.52MB/s"
 - name: Telegram自动选择
   type: url-test
   url: https://telegram.org
@@ -121,15 +103,15 @@ proxy-groups:
   tolerance: 100
   lazy: false
   proxies:
-  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 23.52MB/s"
-  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 18.86MB/s"
-  - "\U0001F1E8\U0001F1E6 CA 002 | ⬇️ 18.79MB/s"
-  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 18.78MB/s"
-  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 18.76MB/s"
-  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 18.75MB/s"
-  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 18.61MB/s"
-  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 18.52MB/s"
-  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 18.50MB/s"
-  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 18.48MB/s"
+  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 28.00MB/s"
+  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 27.16MB/s"
+  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 27.05MB/s"
+  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 26.92MB/s"
+  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 26.87MB/s"
+  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 26.77MB/s"
+  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 26.75MB/s"
+  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 26.71MB/s"
+  - "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 26.66MB/s"
+  - "\U0001F1FA\U0001F1F8 US 010 | ⬇️ 26.52MB/s"
 rules:
 - MATCH,节点选择
