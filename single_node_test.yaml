@@ -3,63 +3,40 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 55.11MB/s"
+- name: "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 53.75MB/s"
   port: 443
   server: 44.198.49.169
   skip-cert-verify: true
   tls: true
   type: http
-- name: "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 46.78MB/s"
+- name: "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 50.96MB/s"
   port: 443
   server: 149.88.21.129
   skip-cert-verify: true
   tls: true
   type: http
-- cipher: aes-256-cfb
-  name: "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 40.93MB/s"
-  password: amazonskr05
-  port: 443
-  server: 54.208.227.172
-  type: ss
-  udp: true
-- name: "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 30.25MB/s"
-  port: 443
-  server: 162.217.114.50
-  skip-cert-verify: true
-  tls: true
-  type: http
-- down: ""
-  fingerprint: ""
-  name: "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 27.98MB/s"
-  obfs: ""
-  obfs-password: ""
+- name: "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 28.36MB/s"
   password: 4291c983-c520-46ac-82cc-48f14bef573f
   port: 35013
   server: 129.213.91.185
   skip-cert-verify: true
   sni: www.bing.com
   type: hysteria2
-  up: ""
-- name: "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 21.48MB/s"
+- name: "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 24.46MB/s"
   port: 443
   server: 206.223.183.13
   skip-cert-verify: true
   tls: true
   type: http
-- name: "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 15.09MB/s"
-  port: 443
-  server: 68.235.56.51
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 11.96MB/s"
+- name: "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 11.65MB/s"
+  password: ""
   port: 9002
-  server: 138.199.35.206
+  server: 138.199.35.219
   skip-cert-verify: true
   tls: true
   type: http
-  udp: true
-- name: "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 11.78MB/s"
+  username: ""
+- name: "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 11.60MB/s"
   password: ""
   port: 9002
   server: 138.199.35.203
@@ -67,30 +44,50 @@ proxies:
   tls: true
   type: http
   username: ""
-- name: "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 11.77MB/s"
-  password: ""
-  port: 9443
-  server: 38.95.111.226
+- name: "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 11.59MB/s"
+  password: None
+  port: 9002
+  server: 138.199.35.212
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: null
+- name: "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 11.57MB/s"
+  password: None
+  port: 9002
+  server: 138.199.35.201
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: null
+- name: "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 11.57MB/s"
+  port: 9002
+  server: 138.199.35.206
   skip-cert-verify: true
   tls: true
   type: http
   udp: true
-  username: ""
+- name: "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 11.56MB/s"
+  port: 9002
+  server: 138.199.35.220
+  skip-cert-verify: true
+  tls: true
+  type: http
 proxy-groups:
 - name: 节点选择
   type: select
   proxies:
   - Telegram自动选择
-  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 55.11MB/s"
-  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 46.78MB/s"
-  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 40.93MB/s"
-  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 30.25MB/s"
-  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 27.98MB/s"
-  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 21.48MB/s"
-  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 15.09MB/s"
-  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 11.96MB/s"
-  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 11.78MB/s"
-  - "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 11.77MB/s"
+  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 53.75MB/s"
+  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 50.96MB/s"
+  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 28.36MB/s"
+  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 24.46MB/s"
+  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 11.65MB/s"
+  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 11.60MB/s"
+  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 11.59MB/s"
+  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 11.57MB/s"
+  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 11.57MB/s"
+  - "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 11.56MB/s"
 - name: Telegram自动选择
   type: url-test
   url: https://telegram.org
@@ -98,15 +95,15 @@ proxy-groups:
   tolerance: 100
   lazy: false
   proxies:
-  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 55.11MB/s"
-  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 46.78MB/s"
-  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 40.93MB/s"
-  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 30.25MB/s"
-  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 27.98MB/s"
-  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 21.48MB/s"
-  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 15.09MB/s"
-  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 11.96MB/s"
-  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 11.78MB/s"
-  - "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 11.77MB/s"
+  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 53.75MB/s"
+  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 50.96MB/s"
+  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 28.36MB/s"
+  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 24.46MB/s"
+  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 11.65MB/s"
+  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 11.60MB/s"
+  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 11.59MB/s"
+  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 11.57MB/s"
+  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 11.57MB/s"
+  - "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 11.56MB/s"
 rules:
 - MATCH,节点选择
