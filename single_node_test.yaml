@@ -3,120 +3,107 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 74.65MB/s"
-  password: "null"
-  port: 443
-  server: 52.55.81.168
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-  username: "null"
-- name: "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 56.68MB/s"
-  port: 443
-  server: 149.88.21.129
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-- name: "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 49.48MB/s"
-  password: e4b72b531a2d10900519
-  port: 443
-  server: 147.182.216.4
-  skip-cert-verify: true
-  sub_tag: K001-260618
-  tls: true
-  type: http
-  udp: true
-  username: testuser1
-- alpn:
-  - h3
-  - h2
-  client-fingerprint: chrome
-  encryption: none
-  name: "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 48.48MB/s"
-  network: ws
-  packet-encoding: xudp
-  port: 443
-  server: saas.sin.fan
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  udp: true
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: snip.edgeoneai.cc.cd
-      User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)
-        Chrome/70.0.3538.110 Safari/537.36
-    max-early-data: 2560
-    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
-  xudp: true
-- name: "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 42.56MB/s"
-  port: 9443
-  server: 198.44.138.27
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-- name: "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 28.52MB/s"
+- name: "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 30.05MB/s"
   port: 8443
-  server: 44.217.145.28
+  server: 44.229.69.166
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 29.25MB/s"
+  password: None
+  port: 9002
+  server: 138.199.35.214
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 29.21MB/s"
+  port: 9002
+  server: 138.199.35.206
   skip-cert-verify: true
   sub_tag: R002-260618
   tls: true
   type: http
   udp: true
-- name: "\U0001F1E8\U0001F1E6 CA 002 | ⬇️ 22.71MB/s"
-  port: 9443
-  server: 23.169.224.34
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-- name: "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 19.16MB/s"
+- name: "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 29.12MB/s"
   port: 443
-  server: 23.133.176.14
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 11.11MB/s"
-  port: 443
-  server: 170.199.233.89
+  server: 44.239.226.15
   skip-cert-verify: true
   sub_tag: R002-260618
   tls: true
   type: http
   udp: true
-- name: "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 10.94MB/s"
+- name: "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 29.10MB/s"
+  password: None
+  port: 9002
+  server: 138.199.35.213
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 28.70MB/s"
   password: "null"
   port: 9002
-  server: 138.199.35.219
+  server: 138.199.35.200
   skip-cert-verify: true
-  sni: 138.199.35.219
-  sub_tag: R002-260618
   tls: true
   type: http
   udp: true
   username: "null"
+- name: "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 28.65MB/s"
+  password: "null"
+  port: 9002
+  server: 138.199.35.209
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+  username: "null"
+- name: "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 28.52MB/s"
+  password: None
+  port: 9002
+  server: 138.199.35.210
+  skip-cert-verify: true
+  sni: 138.199.35.210
+  tls: true
+  type: http
+  username: "null"
+- name: "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 28.43MB/s"
+  password: "null"
+  port: 9002
+  server: 138.199.35.220
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+  username: "null"
+- name: "\U0001F1FA\U0001F1F8 US 010 | ⬇️ 28.30MB/s"
+  port: 9002
+  server: 138.199.35.198
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
 proxy-groups:
 - name: 节点选择
   type: select
   proxies:
   - Telegram自动选择
-  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 74.65MB/s"
-  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 56.68MB/s"
-  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 49.48MB/s"
-  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 48.48MB/s"
-  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 42.56MB/s"
-  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 28.52MB/s"
-  - "\U0001F1E8\U0001F1E6 CA 002 | ⬇️ 22.71MB/s"
-  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 19.16MB/s"
-  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 11.11MB/s"
-  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 10.94MB/s"
+  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 30.05MB/s"
+  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 29.25MB/s"
+  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 29.21MB/s"
+  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 29.12MB/s"
+  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 29.10MB/s"
+  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 28.70MB/s"
+  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 28.65MB/s"
+  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 28.52MB/s"
+  - "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 28.43MB/s"
+  - "\U0001F1FA\U0001F1F8 US 010 | ⬇️ 28.30MB/s"
 - name: Telegram自动选择
   type: url-test
   url: https://telegram.org
@@ -124,15 +111,15 @@ proxy-groups:
   tolerance: 100
   lazy: false
   proxies:
-  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 74.65MB/s"
-  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 56.68MB/s"
-  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 49.48MB/s"
-  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 48.48MB/s"
-  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 42.56MB/s"
-  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 28.52MB/s"
-  - "\U0001F1E8\U0001F1E6 CA 002 | ⬇️ 22.71MB/s"
-  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 19.16MB/s"
-  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 11.11MB/s"
-  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 10.94MB/s"
+  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 30.05MB/s"
+  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 29.25MB/s"
+  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 29.21MB/s"
+  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 29.12MB/s"
+  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 29.10MB/s"
+  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 28.70MB/s"
+  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 28.65MB/s"
+  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 28.52MB/s"
+  - "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 28.43MB/s"
+  - "\U0001F1FA\U0001F1F8 US 010 | ⬇️ 28.30MB/s"
 rules:
 - MATCH,节点选择
