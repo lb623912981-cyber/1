@@ -3,7 +3,32 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 16.53MB/s"
+- name: "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 62.42MB/s"
+  password: None
+  port: 443
+  server: 52.55.81.168
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 46.83MB/s"
+  port: 443
+  server: 149.88.21.129
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 39.64MB/s"
+  port: 443
+  server: 162.217.114.50
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 34.16MB/s"
   port: 9443
   server: 198.44.138.27
   skip-cert-verify: true
@@ -11,104 +36,69 @@ proxies:
   tls: true
   type: http
   udp: true
-- name: "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 13.81MB/s"
+- name: "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 24.11MB/s"
+  port: 443
+  server: 121.127.34.82
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 20.16MB/s"
   port: 9443
-  server: 198.44.135.19
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 13.60MB/s"
-  password: None
-  port: 9002
-  server: 138.199.35.210
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
-  udp: true
-- name: "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 13.09MB/s"
-  password: ""
-  port: 9002
-  server: 138.199.35.217
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-  username: ""
-- name: "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 13.07MB/s"
-  password: None
-  port: 9002
-  server: 138.199.35.208
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
-  udp: true
-- name: "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 13.07MB/s"
-  password: None
-  port: 9002
-  server: 138.199.35.214
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
-  udp: true
-- name: "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 13.04MB/s"
-  password: "null"
-  port: 9002
-  server: 138.199.35.218
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
-  udp: true
-  username: "null"
-- name: "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 13.04MB/s"
-  password: "null"
-  port: 9002
-  server: 138.199.35.220
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
-  udp: true
-  username: "null"
-- name: "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 12.96MB/s"
-  password: "null"
-  port: 9002
-  server: 138.199.35.199
+  server: 149.88.98.81
   skip-cert-verify: true
   sub_tag: R002-260618
   tls: true
   type: http
   udp: true
-  username: "null"
-- name: "\U0001F1FA\U0001F1F8 US 010 | ⬇️ 12.96MB/s"
-  password: "null"
-  port: 9002
-  server: 138.199.35.219
+- name: "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 19.51MB/s"
+  port: 443
+  server: 192.227.176.234
   skip-cert-verify: true
-  sni: 138.199.35.219
   sub_tag: R002-260618
   tls: true
   type: http
   udp: true
-  username: "null"
+- name: "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 19.07MB/s"
+  port: 8443
+  server: 44.217.145.28
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 18.33MB/s"
+  port: 443
+  server: 12.221.146.147
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 17.37MB/s"
+  port: 443
+  server: 12.202.180.118
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
 proxy-groups:
 - name: 节点选择
   type: select
   proxies:
   - Telegram自动选择
-  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 16.53MB/s"
-  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 13.81MB/s"
-  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 13.60MB/s"
-  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 13.09MB/s"
-  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 13.07MB/s"
-  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 13.07MB/s"
-  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 13.04MB/s"
-  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 13.04MB/s"
-  - "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 12.96MB/s"
-  - "\U0001F1FA\U0001F1F8 US 010 | ⬇️ 12.96MB/s"
+  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 62.42MB/s"
+  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 46.83MB/s"
+  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 39.64MB/s"
+  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 34.16MB/s"
+  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 24.11MB/s"
+  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 20.16MB/s"
+  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 19.51MB/s"
+  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 19.07MB/s"
+  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 18.33MB/s"
+  - "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 17.37MB/s"
 - name: Telegram自动选择
   type: url-test
   url: https://telegram.org
@@ -116,15 +106,15 @@ proxy-groups:
   tolerance: 100
   lazy: false
   proxies:
-  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 16.53MB/s"
-  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 13.81MB/s"
-  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 13.60MB/s"
-  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 13.09MB/s"
-  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 13.07MB/s"
-  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 13.07MB/s"
-  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 13.04MB/s"
-  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 13.04MB/s"
-  - "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 12.96MB/s"
-  - "\U0001F1FA\U0001F1F8 US 010 | ⬇️ 12.96MB/s"
+  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 62.42MB/s"
+  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 46.83MB/s"
+  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 39.64MB/s"
+  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 34.16MB/s"
+  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 24.11MB/s"
+  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 20.16MB/s"
+  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 19.51MB/s"
+  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 19.07MB/s"
+  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 18.33MB/s"
+  - "\U0001F1FA\U0001F1F8 US 009 | ⬇️ 17.37MB/s"
 rules:
 - MATCH,节点选择
