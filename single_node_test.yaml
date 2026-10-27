@@ -3,91 +3,96 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 22.07MB/s"
-  password: null
-  port: 443
-  server: webdrone.club
-  skip-cert-verify: false
-  tls: true
-  type: http
-  username: null
-- name: "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 21.80MB/s"
-  port: 8443
-  server: 44.229.69.166
+- name: "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 23.50MB/s"
+  password: None
+  port: 9443
+  server: 154.47.25.78
   skip-cert-verify: true
   tls: true
   type: http
   udp: true
-- name: "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 21.68MB/s"
+- name: "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 22.21MB/s"
   password: null
-  port: 8443
-  server: 54.190.176.228
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: null
-- name: "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 19.40MB/s"
-  port: 8443
-  server: 44.248.167.117
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-- name: "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 15.20MB/s"
-  port: 443
-  server: 167.88.60.242
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 13.15MB/s"
   port: 443
   server: 38.247.141.135
   skip-cert-verify: true
   tls: true
   type: http
+  username: null
+- name: "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 17.34MB/s"
+  port: 443
+  server: 12.202.180.10
+  skip-cert-verify: true
+  tls: true
+  type: http
   udp: true
-- name: "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 11.36MB/s"
+- name: "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 15.95MB/s"
+  port: 443
+  server: 167.88.60.242
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+- cipher: rc4-md5
+  name: "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 15.13MB/s"
+  obfs: tls1.2_ticket_auth
+  obfs-param: 6f5218522.douyin.com
+  password: di15PV
+  port: 43694
+  protocol: auth_aes128_md5
+  protocol-param: 218522:0hfCJk
+  server: api.meituan88.com
+  type: ssr
+- name: "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 13.89MB/s"
+  port: 8443
+  server: 35.84.133.236
+  skip-cert-verify: true
+  tls: true
+  type: http
+- cipher: rc4-md5
+  name: "\U0001F1ED\U0001F1F0 HK 001 | ⬇️ 11.43MB/s"
+  obfs: plain
+  obfs-param: f7d23929.douyin.com
+  password: di15PV
+  port: 39266
+  protocol: auth_aes128_md5
+  protocol-param: 23929:563537032
+  server: api.meituan88.com
+  type: ssr
+- name: "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 11.22MB/s"
   port: 8443
   server: 154.81.36.92
   skip-cert-verify: true
   tls: true
   type: http
-  udp: true
-- name: "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 11.35MB/s"
+- name: "\U0001F1EE\U0001F1EA IE 001 | ⬇️ 8.95MB/s"
   port: 443
-  server: 129.153.93.183
-  skip-cert-verify: true
-  tfo: false
-  tls: true
-  type: http
-- name: "\U0001F1EB\U0001F1F7 FR 001 | ⬇️ 7.40MB/s"
-  password: None
-  port: 9443
-  server: 213.139.9.142
+  server: 34.249.214.108
   skip-cert-verify: true
   tls: true
   type: http
-- name: "\U0001F1EB\U0001F1F7 FR 002 | ⬇️ 7.07MB/s"
-  port: 9443
-  server: 138.199.47.247
-  skip-cert-verify: true
-  tls: true
-  type: http
+- name: "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 8.87MB/s"
+  network: tcp
+  port: 57259
+  server: 169.128.83.4
+  type: vless
+  udp: true
+  uuid: a1962f23-f8f8-412d-f2ce-3361e7b72889
 proxy-groups:
 - name: 节点选择
   type: select
   proxies:
   - Telegram自动选择
-  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 22.07MB/s"
-  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 21.80MB/s"
-  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 21.68MB/s"
-  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 19.40MB/s"
-  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 15.20MB/s"
-  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 13.15MB/s"
-  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 11.36MB/s"
-  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 11.35MB/s"
-  - "\U0001F1EB\U0001F1F7 FR 001 | ⬇️ 7.40MB/s"
-  - "\U0001F1EB\U0001F1F7 FR 002 | ⬇️ 7.07MB/s"
+  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 23.50MB/s"
+  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 22.21MB/s"
+  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 17.34MB/s"
+  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 15.95MB/s"
+  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 15.13MB/s"
+  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 13.89MB/s"
+  - "\U0001F1ED\U0001F1F0 HK 001 | ⬇️ 11.43MB/s"
+  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 11.22MB/s"
+  - "\U0001F1EE\U0001F1EA IE 001 | ⬇️ 8.95MB/s"
+  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 8.87MB/s"
 - name: Telegram自动选择
   type: url-test
   url: https://telegram.org
@@ -95,15 +100,15 @@ proxy-groups:
   tolerance: 100
   lazy: false
   proxies:
-  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 22.07MB/s"
-  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 21.80MB/s"
-  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 21.68MB/s"
-  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 19.40MB/s"
-  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 15.20MB/s"
-  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 13.15MB/s"
-  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 11.36MB/s"
-  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 11.35MB/s"
-  - "\U0001F1EB\U0001F1F7 FR 001 | ⬇️ 7.40MB/s"
-  - "\U0001F1EB\U0001F1F7 FR 002 | ⬇️ 7.07MB/s"
+  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 23.50MB/s"
+  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 22.21MB/s"
+  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 17.34MB/s"
+  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 15.95MB/s"
+  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 15.13MB/s"
+  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 13.89MB/s"
+  - "\U0001F1ED\U0001F1F0 HK 001 | ⬇️ 11.43MB/s"
+  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 11.22MB/s"
+  - "\U0001F1EE\U0001F1EA IE 001 | ⬇️ 8.95MB/s"
+  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 8.87MB/s"
 rules:
 - MATCH,节点选择
