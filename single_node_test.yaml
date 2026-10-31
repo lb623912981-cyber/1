@@ -3,7 +3,13 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 21.89MB/s"
+- name: "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 54.99MB/s"
+  port: 9443
+  server: 198.44.138.27
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 28.31MB/s"
   password: null
   port: 9443
   server: 198.44.157.19
@@ -11,20 +17,7 @@ proxies:
   tls: true
   type: http
   username: null
-- name: "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 18.66MB/s"
-  port: 9443
-  server: 38.95.111.226
-  skip-cert-verify: true
-  tfo: false
-  tls: true
-  type: http
-- name: "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 18.02MB/s"
-  port: 443
-  server: 149.22.88.65
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 17.13MB/s"
+- name: "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 25.72MB/s"
   password: null
   port: 443
   server: 12.202.180.118
@@ -32,7 +25,14 @@ proxies:
   tls: true
   type: http
   username: null
-- name: "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 16.37MB/s"
+- name: "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 14.18MB/s"
+  port: 9443
+  server: 38.95.111.226
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: http
+- name: "\U0001F1EE\U0001F1E9 ID 001 | ⬇️ 14.04MB/s"
   password: ""
   port: 443
   server: purposebydesig.club
@@ -40,7 +40,20 @@ proxies:
   tls: true
   type: http
   username: ""
-- name: "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 14.38MB/s"
+- name: "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 13.89MB/s"
+  password: "null"
+  port: 443
+  server: tzoa.fun
+  tls: true
+  type: http
+  username: "null"
+- name: "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 13.41MB/s"
+  port: 443
+  server: 149.22.88.65
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 12.00MB/s"
   password: null
   port: 443
   server: 167.88.60.242
@@ -48,47 +61,36 @@ proxies:
   tls: true
   type: http
   username: null
-- name: "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 14.34MB/s"
-  port: 443
-  server: 38.247.141.135
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 13.67MB/s"
-  password: "null"
-  port: 443
-  server: tzoa.fun
-  tls: true
-  type: http
-  username: "null"
-- name: "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 13.02MB/s"
-  port: 9443
-  server: 198.44.138.27
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: "\U0001F1EE\U0001F1EA IE 001 | ⬇️ 9.26MB/s"
+- name: "\U0001F1EE\U0001F1EA IE 001 | ⬇️ 11.56MB/s"
   port: 443
   server: 18.200.158.139
   skip-cert-verify: true
   tfo: false
   tls: true
   type: http
+- name: "\U0001F1EC\U0001F1E7 GB 001 | ⬇️ 10.63MB/s"
+  password: None
+  port: 443
+  server: 212.102.63.61
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
 proxy-groups:
 - name: 节点选择
   type: select
   proxies:
   - Telegram自动选择
-  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 21.89MB/s"
-  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 18.66MB/s"
-  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 18.02MB/s"
-  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 17.13MB/s"
-  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 16.37MB/s"
-  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 14.38MB/s"
-  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 14.34MB/s"
-  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 13.67MB/s"
-  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 13.02MB/s"
-  - "\U0001F1EE\U0001F1EA IE 001 | ⬇️ 9.26MB/s"
+  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 54.99MB/s"
+  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 28.31MB/s"
+  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 25.72MB/s"
+  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 14.18MB/s"
+  - "\U0001F1EE\U0001F1E9 ID 001 | ⬇️ 14.04MB/s"
+  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 13.89MB/s"
+  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 13.41MB/s"
+  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 12.00MB/s"
+  - "\U0001F1EE\U0001F1EA IE 001 | ⬇️ 11.56MB/s"
+  - "\U0001F1EC\U0001F1E7 GB 001 | ⬇️ 10.63MB/s"
 - name: Telegram自动选择
   type: url-test
   url: https://telegram.org
@@ -96,15 +98,15 @@ proxy-groups:
   tolerance: 100
   lazy: false
   proxies:
-  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 21.89MB/s"
-  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 18.66MB/s"
-  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 18.02MB/s"
-  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 17.13MB/s"
-  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 16.37MB/s"
-  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 14.38MB/s"
-  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 14.34MB/s"
-  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 13.67MB/s"
-  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 13.02MB/s"
-  - "\U0001F1EE\U0001F1EA IE 001 | ⬇️ 9.26MB/s"
+  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 54.99MB/s"
+  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 28.31MB/s"
+  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 25.72MB/s"
+  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 14.18MB/s"
+  - "\U0001F1EE\U0001F1E9 ID 001 | ⬇️ 14.04MB/s"
+  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 13.89MB/s"
+  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 13.41MB/s"
+  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 12.00MB/s"
+  - "\U0001F1EE\U0001F1EA IE 001 | ⬇️ 11.56MB/s"
+  - "\U0001F1EC\U0001F1E7 GB 001 | ⬇️ 10.63MB/s"
 rules:
 - MATCH,节点选择
