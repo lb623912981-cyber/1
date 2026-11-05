@@ -3,94 +3,99 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 38.23MB/s"
+- name: "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 23.59MB/s"
+  password: None
   port: 9443
-  server: 38.95.111.226
-  skip-cert-verify: true
-  tfo: false
-  tls: true
-  type: http
-- name: "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 25.43MB/s"
-  password: ""
-  port: 443
-  server: purposebydesig.club
+  server: 149.88.98.81
   skip-cert-verify: true
   tls: true
   type: http
-  username: ""
-- name: "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 25.31MB/s"
+- name: "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 14.47MB/s"
   password: "null"
-  port: 443
-  server: tzoa.fun
+  port: 9002
+  server: 138.199.35.216
+  skip-cert-verify: true
   tls: true
   type: http
   username: "null"
-- name: "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 22.41MB/s"
-  port: 443
-  server: 149.22.88.65
+- name: "\U0001F1EB\U0001F1F7 FR 001 | ⬇️ 10.91MB/s"
+  port: 9443
+  server: 213.139.9.142
   skip-cert-verify: true
   tls: true
   type: http
-- name: "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 21.12MB/s"
+- name: "\U0001F1EC\U0001F1E7 GB 001 | ⬇️ 10.67MB/s"
+  password: None
   port: 443
-  server: 129.153.93.183
+  server: 37.120.233.34
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+- cipher: aes-256-gcm
+  name: "\U0001F1EE\U0001F1F9 IT 001 | ⬇️ 10.46MB/s"
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.81
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: "\U0001F1EE\U0001F1F9 IT 002 | ⬇️ 10.42MB/s"
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.99
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: "\U0001F1EE\U0001F1F9 IT 003 | ⬇️ 10.28MB/s"
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.63
+  skip-cert-verify: false
+  tls: false
+  type: ss
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 9.18MB/s"
+  port: 443
+  server: 24.225.10.211
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: "\U0001F1F1\U0001F1FA LU 001 | ⬇️ 9.17MB/s"
+  port: 9443
+  server: 185.221.132.226
   skip-cert-verify: true
   tfo: false
   tls: true
   type: http
-- name: "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 19.36MB/s"
+- name: "\U0001F1E8\U0001F1ED CH 001 | ⬇️ 8.84MB/s"
   password: null
   port: 443
-  server: 167.88.60.242
+  server: 31.7.62.50
   skip-cert-verify: true
   tls: true
   type: http
   username: null
-- name: "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 17.70MB/s"
-  port: 9443
-  server: 198.44.138.27
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 13.17MB/s"
-  password: null
-  port: 443
-  server: 12.202.180.118
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: null
-- name: "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 12.63MB/s"
-  password: null
-  port: 9443
-  server: 198.44.157.19
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: null
-- name: "\U0001F1EC\U0001F1E7 GB 001 | ⬇️ 7.33MB/s"
-  password: None
-  port: 443
-  server: 212.102.63.61
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
 proxy-groups:
 - name: 节点选择
   type: select
   proxies:
   - Telegram自动选择
-  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 38.23MB/s"
-  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 25.43MB/s"
-  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 25.31MB/s"
-  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 22.41MB/s"
-  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 21.12MB/s"
-  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 19.36MB/s"
-  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 17.70MB/s"
-  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 13.17MB/s"
-  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 12.63MB/s"
-  - "\U0001F1EC\U0001F1E7 GB 001 | ⬇️ 7.33MB/s"
+  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 23.59MB/s"
+  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 14.47MB/s"
+  - "\U0001F1EB\U0001F1F7 FR 001 | ⬇️ 10.91MB/s"
+  - "\U0001F1EC\U0001F1E7 GB 001 | ⬇️ 10.67MB/s"
+  - "\U0001F1EE\U0001F1F9 IT 001 | ⬇️ 10.46MB/s"
+  - "\U0001F1EE\U0001F1F9 IT 002 | ⬇️ 10.42MB/s"
+  - "\U0001F1EE\U0001F1F9 IT 003 | ⬇️ 10.28MB/s"
+  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 9.18MB/s"
+  - "\U0001F1F1\U0001F1FA LU 001 | ⬇️ 9.17MB/s"
+  - "\U0001F1E8\U0001F1ED CH 001 | ⬇️ 8.84MB/s"
 - name: Telegram自动选择
   type: url-test
   url: https://telegram.org
@@ -98,15 +103,15 @@ proxy-groups:
   tolerance: 100
   lazy: false
   proxies:
-  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 38.23MB/s"
-  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 25.43MB/s"
-  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 25.31MB/s"
-  - "\U0001F1FA\U0001F1F8 US 004 | ⬇️ 22.41MB/s"
-  - "\U0001F1FA\U0001F1F8 US 005 | ⬇️ 21.12MB/s"
-  - "\U0001F1FA\U0001F1F8 US 006 | ⬇️ 19.36MB/s"
-  - "\U0001F1FA\U0001F1F8 US 007 | ⬇️ 17.70MB/s"
-  - "\U0001F1FA\U0001F1F8 US 008 | ⬇️ 13.17MB/s"
-  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 12.63MB/s"
-  - "\U0001F1EC\U0001F1E7 GB 001 | ⬇️ 7.33MB/s"
+  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 23.59MB/s"
+  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 14.47MB/s"
+  - "\U0001F1EB\U0001F1F7 FR 001 | ⬇️ 10.91MB/s"
+  - "\U0001F1EC\U0001F1E7 GB 001 | ⬇️ 10.67MB/s"
+  - "\U0001F1EE\U0001F1F9 IT 001 | ⬇️ 10.46MB/s"
+  - "\U0001F1EE\U0001F1F9 IT 002 | ⬇️ 10.42MB/s"
+  - "\U0001F1EE\U0001F1F9 IT 003 | ⬇️ 10.28MB/s"
+  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 9.18MB/s"
+  - "\U0001F1F1\U0001F1FA LU 001 | ⬇️ 9.17MB/s"
+  - "\U0001F1E8\U0001F1ED CH 001 | ⬇️ 8.84MB/s"
 rules:
 - MATCH,节点选择
