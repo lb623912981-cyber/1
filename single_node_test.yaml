@@ -3,99 +3,95 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 19.30MB/s"
-  password: None
+- name: "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 34.41MB/s"
   port: 443
-  server: 23.133.176.14
+  server: 172.64.69.89
   skip-cert-verify: true
-  sub_tag: P002-260618
   tls: true
   type: http
-  udp: true
-  x-toolall-mihomo: true
-- name: "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 16.78MB/s"
+- name: "\U0001F1E8\U0001F1E6 CA 002 | ⬇️ 30.89MB/s"
   port: 443
-  server: 193.239.236.134
+  server: 172.64.68.89
   skip-cert-verify: true
   sub_tag: R002-260618
   tls: true
   type: http
   udp: true
-- name: "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 13.78MB/s"
-  password: None
-  port: 9443
-  server: 198.44.135.19
+  x-toolall-mihomo: true
+- allowed-ips:
+  - 0.0.0.0/0
+  ip: 172.16.0.2
+  mtu: 1280
+  name: "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 27.24MB/s"
+  port: 903
+  private-key: 2PdIoQgtmQ11bJCJey7+EcIw05fiNwSz8Z60DcXw/Xc=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  server: 8.6.112.175
+  type: wireguard
+  udp: true
+- name: "\U0001F1F3\U0001F1F1 NL 001 | ⬇️ 9.39MB/s"
+  password: "null"
+  port: 9002
+  server: 84.17.47.149
   skip-cert-verify: true
-  sub_tag: K001-260618
+  sub_tag: R002-260618
   tls: true
   type: http
   udp: true
+  username: "null"
   x-toolall-mihomo: true
-- cipher: chacha20-ietf
-  name: "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 7.31MB/s"
-  obfs: plain
-  obfs-param: aad163564.douyin.com
-  password: di15PV
-  port: 7001
-  protocol: auth_aes128_md5
-  protocol-param: 163564:FkGVmc
-  server: api.meituan88.com
-  type: ssr
 - cipher: aes-256-gcm
-  name: "\U0001F1EE\U0001F1F9 IT 001 | ⬇️ 6.97MB/s"
+  name: "\U0001F1EE\U0001F1F9 IT 001 | ⬇️ 9.33MB/s"
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 202.50.253.72
-  type: ss
-- cipher: chacha20-ietf
-  name: "\U0001F1ED\U0001F1F0 HK 001 | ⬇️ 6.96MB/s"
-  obfs: plain
-  obfs-param: aad163564.douyin.com
-  password: di15PV
-  port: 7003
-  protocol: auth_aes128_md5
-  protocol-param: 163564:FkGVmc
-  server: api.meituan88.com
-  type: ssr
-- cipher: aes-256-gcm
-  name: "\U0001F1EE\U0001F1F9 IT 002 | ⬇️ 6.92MB/s"
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.54
+  server: 202.50.253.27
   type: ss
 - cipher: aes-256-gcm
-  name: "\U0001F1EE\U0001F1F9 IT 003 | ⬇️ 6.92MB/s"
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.63
-  type: ss
-- cipher: aes-256-gcm
-  name: "\U0001F1EE\U0001F1F9 IT 004 | ⬇️ 6.90MB/s"
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.90
-  type: ss
-- cipher: aes-256-gcm
-  name: "\U0001F1EE\U0001F1F9 IT 005 | ⬇️ 6.86MB/s"
+  name: "\U0001F1EE\U0001F1F9 IT 002 | ⬇️ 9.30MB/s"
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 202.50.253.81
   type: ss
+- cipher: aes-256-gcm
+  name: "\U0001F1EE\U0001F1F9 IT 003 | ⬇️ 9.30MB/s"
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.99
+  type: ss
+- cipher: aes-256-gcm
+  name: "\U0001F1EE\U0001F1F9 IT 004 | ⬇️ 9.23MB/s"
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.36
+  type: ss
+- cipher: aes-256-gcm
+  name: "\U0001F1EE\U0001F1F9 IT 005 | ⬇️ 9.06MB/s"
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.45
+  type: ss
+- name: "\U0001F1F3\U0001F1F1 NL 002 | ⬇️ 9.05MB/s"
+  port: 9002
+  server: 84.17.47.125
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
 proxy-groups:
 - name: 节点选择
   type: select
   proxies:
   - Telegram自动选择
-  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 19.30MB/s"
-  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 16.78MB/s"
-  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 13.78MB/s"
-  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 7.31MB/s"
-  - "\U0001F1EE\U0001F1F9 IT 001 | ⬇️ 6.97MB/s"
-  - "\U0001F1ED\U0001F1F0 HK 001 | ⬇️ 6.96MB/s"
-  - "\U0001F1EE\U0001F1F9 IT 002 | ⬇️ 6.92MB/s"
-  - "\U0001F1EE\U0001F1F9 IT 003 | ⬇️ 6.92MB/s"
-  - "\U0001F1EE\U0001F1F9 IT 004 | ⬇️ 6.90MB/s"
-  - "\U0001F1EE\U0001F1F9 IT 005 | ⬇️ 6.86MB/s"
+  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 34.41MB/s"
+  - "\U0001F1E8\U0001F1E6 CA 002 | ⬇️ 30.89MB/s"
+  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 27.24MB/s"
+  - "\U0001F1F3\U0001F1F1 NL 001 | ⬇️ 9.39MB/s"
+  - "\U0001F1EE\U0001F1F9 IT 001 | ⬇️ 9.33MB/s"
+  - "\U0001F1EE\U0001F1F9 IT 002 | ⬇️ 9.30MB/s"
+  - "\U0001F1EE\U0001F1F9 IT 003 | ⬇️ 9.30MB/s"
+  - "\U0001F1EE\U0001F1F9 IT 004 | ⬇️ 9.23MB/s"
+  - "\U0001F1EE\U0001F1F9 IT 005 | ⬇️ 9.06MB/s"
+  - "\U0001F1F3\U0001F1F1 NL 002 | ⬇️ 9.05MB/s"
 - name: Telegram自动选择
   type: url-test
   url: https://telegram.org
@@ -103,15 +99,15 @@ proxy-groups:
   tolerance: 100
   lazy: false
   proxies:
-  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 19.30MB/s"
-  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 16.78MB/s"
-  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 13.78MB/s"
-  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 7.31MB/s"
-  - "\U0001F1EE\U0001F1F9 IT 001 | ⬇️ 6.97MB/s"
-  - "\U0001F1ED\U0001F1F0 HK 001 | ⬇️ 6.96MB/s"
-  - "\U0001F1EE\U0001F1F9 IT 002 | ⬇️ 6.92MB/s"
-  - "\U0001F1EE\U0001F1F9 IT 003 | ⬇️ 6.92MB/s"
-  - "\U0001F1EE\U0001F1F9 IT 004 | ⬇️ 6.90MB/s"
-  - "\U0001F1EE\U0001F1F9 IT 005 | ⬇️ 6.86MB/s"
+  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 34.41MB/s"
+  - "\U0001F1E8\U0001F1E6 CA 002 | ⬇️ 30.89MB/s"
+  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 27.24MB/s"
+  - "\U0001F1F3\U0001F1F1 NL 001 | ⬇️ 9.39MB/s"
+  - "\U0001F1EE\U0001F1F9 IT 001 | ⬇️ 9.33MB/s"
+  - "\U0001F1EE\U0001F1F9 IT 002 | ⬇️ 9.30MB/s"
+  - "\U0001F1EE\U0001F1F9 IT 003 | ⬇️ 9.30MB/s"
+  - "\U0001F1EE\U0001F1F9 IT 004 | ⬇️ 9.23MB/s"
+  - "\U0001F1EE\U0001F1F9 IT 005 | ⬇️ 9.06MB/s"
+  - "\U0001F1F3\U0001F1F1 NL 002 | ⬇️ 9.05MB/s"
 rules:
 - MATCH,节点选择
