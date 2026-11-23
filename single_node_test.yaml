@@ -3,13 +3,7 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 126.94MB/s"
-  port: 443
-  server: 172.64.69.89
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: "\U0001F1E8\U0001F1E6 CA 002 | ⬇️ 106.64MB/s"
+- name: "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 62.00MB/s"
   port: 443
   server: 172.64.68.89
   skip-cert-verify: true
@@ -18,65 +12,38 @@ proxies:
   type: http
   udp: true
   x-toolall-mihomo: true
+- name: "\U0001F1E8\U0001F1E6 CA 002 | ⬇️ 55.05MB/s"
+  port: 443
+  server: 172.64.69.89
+  skip-cert-verify: true
+  tls: true
+  type: http
 - allowed-ips:
   - 0.0.0.0/0
   ip: 172.16.0.2
   mtu: 1280
-  name: "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 38.19MB/s"
+  name: "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 48.00MB/s"
   port: 903
   private-key: 2PdIoQgtmQ11bJCJey7+EcIw05fiNwSz8Z60DcXw/Xc=
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   server: 8.6.112.175
   type: wireguard
   udp: true
-- cipher: aes-256-gcm
-  name: "\U0001F1EE\U0001F1F9 IT 001 | ⬇️ 9.96MB/s"
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.81
-  type: ss
-- cipher: aes-256-gcm
-  name: "\U0001F1EE\U0001F1F9 IT 002 | ⬇️ 9.85MB/s"
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.36
-  type: ss
-- alterId: 64
-  cipher: auto
-  name: "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 9.80MB/s"
-  network: ws
-  port: 30004
-  server: 192.74.236.148
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: www.91334565.xyz
-    path: /path/1733477783705
-  x-toolall-mihomo: true
-- cipher: aes-256-gcm
-  name: "\U0001F1EE\U0001F1F9 IT 003 | ⬇️ 9.74MB/s"
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.99
-  type: ss
-- cipher: aes-256-gcm
-  name: "\U0001F1EE\U0001F1F9 IT 004 | ⬇️ 9.62MB/s"
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.45
-  type: ss
-- name: "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 9.44MB/s"
+- name: "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 11.93MB/s"
   password: l1tlrdx52v
   port: 62000
   server: 66.253.2.69
   type: socks5
   udp: true
   username: u_rb1dba2
-- name: "\U0001F1F3\U0001F1F1 NL 001 | ⬇️ 9.02MB/s"
+- name: "\U0001F1F3\U0001F1F1 NL 001 | ⬇️ 6.10MB/s"
+  port: 9002
+  server: 84.17.47.125
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+- name: "\U0001F1F3\U0001F1F1 NL 002 | ⬇️ 6.04MB/s"
   password: None
   port: 9002
   server: 84.17.47.146
@@ -86,21 +53,46 @@ proxies:
   type: http
   udp: true
   x-toolall-mihomo: true
+- name: "\U0001F1F3\U0001F1F1 NL 003 | ⬇️ 5.89MB/s"
+  port: 9002
+  server: 84.17.47.124
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+- cipher: aes-256-gcm
+  name: "\U0001F1EE\U0001F1F9 IT 001 | ⬇️ 5.88MB/s"
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.99
+  type: ss
+- cipher: aes-256-gcm
+  name: "\U0001F1EE\U0001F1F9 IT 002 | ⬇️ 5.88MB/s"
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.36
+  type: ss
+- cipher: aes-256-gcm
+  name: "\U0001F1EE\U0001F1F9 IT 003 | ⬇️ 5.87MB/s"
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.45
+  type: ss
 proxy-groups:
 - name: 节点选择
   type: select
   proxies:
   - Telegram自动选择
-  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 126.94MB/s"
-  - "\U0001F1E8\U0001F1E6 CA 002 | ⬇️ 106.64MB/s"
-  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 38.19MB/s"
-  - "\U0001F1EE\U0001F1F9 IT 001 | ⬇️ 9.96MB/s"
-  - "\U0001F1EE\U0001F1F9 IT 002 | ⬇️ 9.85MB/s"
-  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 9.80MB/s"
-  - "\U0001F1EE\U0001F1F9 IT 003 | ⬇️ 9.74MB/s"
-  - "\U0001F1EE\U0001F1F9 IT 004 | ⬇️ 9.62MB/s"
-  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 9.44MB/s"
-  - "\U0001F1F3\U0001F1F1 NL 001 | ⬇️ 9.02MB/s"
+  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 62.00MB/s"
+  - "\U0001F1E8\U0001F1E6 CA 002 | ⬇️ 55.05MB/s"
+  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 48.00MB/s"
+  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 11.93MB/s"
+  - "\U0001F1F3\U0001F1F1 NL 001 | ⬇️ 6.10MB/s"
+  - "\U0001F1F3\U0001F1F1 NL 002 | ⬇️ 6.04MB/s"
+  - "\U0001F1F3\U0001F1F1 NL 003 | ⬇️ 5.89MB/s"
+  - "\U0001F1EE\U0001F1F9 IT 001 | ⬇️ 5.88MB/s"
+  - "\U0001F1EE\U0001F1F9 IT 002 | ⬇️ 5.88MB/s"
+  - "\U0001F1EE\U0001F1F9 IT 003 | ⬇️ 5.87MB/s"
 - name: Telegram自动选择
   type: url-test
   url: https://telegram.org
@@ -108,15 +100,15 @@ proxy-groups:
   tolerance: 100
   lazy: false
   proxies:
-  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 126.94MB/s"
-  - "\U0001F1E8\U0001F1E6 CA 002 | ⬇️ 106.64MB/s"
-  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 38.19MB/s"
-  - "\U0001F1EE\U0001F1F9 IT 001 | ⬇️ 9.96MB/s"
-  - "\U0001F1EE\U0001F1F9 IT 002 | ⬇️ 9.85MB/s"
-  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 9.80MB/s"
-  - "\U0001F1EE\U0001F1F9 IT 003 | ⬇️ 9.74MB/s"
-  - "\U0001F1EE\U0001F1F9 IT 004 | ⬇️ 9.62MB/s"
-  - "\U0001F1FA\U0001F1F8 US 003 | ⬇️ 9.44MB/s"
-  - "\U0001F1F3\U0001F1F1 NL 001 | ⬇️ 9.02MB/s"
+  - "\U0001F1E8\U0001F1E6 CA 001 | ⬇️ 62.00MB/s"
+  - "\U0001F1E8\U0001F1E6 CA 002 | ⬇️ 55.05MB/s"
+  - "\U0001F1FA\U0001F1F8 US 001 | ⬇️ 48.00MB/s"
+  - "\U0001F1FA\U0001F1F8 US 002 | ⬇️ 11.93MB/s"
+  - "\U0001F1F3\U0001F1F1 NL 001 | ⬇️ 6.10MB/s"
+  - "\U0001F1F3\U0001F1F1 NL 002 | ⬇️ 6.04MB/s"
+  - "\U0001F1F3\U0001F1F1 NL 003 | ⬇️ 5.89MB/s"
+  - "\U0001F1EE\U0001F1F9 IT 001 | ⬇️ 5.88MB/s"
+  - "\U0001F1EE\U0001F1F9 IT 002 | ⬇️ 5.88MB/s"
+  - "\U0001F1EE\U0001F1F9 IT 003 | ⬇️ 5.87MB/s"
 rules:
 - MATCH,节点选择
